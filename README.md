@@ -21,17 +21,11 @@
 2. PowerShell を管理者として実行し、下記コマンドを実行します
 `Show-WsustainableSettings`
 3. 必要なコンポーネントを選択して `インストール` をクリックします
-![WSUSサーバー向け追加コンポーネント](https://user-images.githubusercontent.com/760251/230725560-7cb1b45b-65e2-405b-ab38-63b796c2999e.png)
 4. `実行` をクリックし、`接続できました` と表示されたことを確認してから `次へ` をクリックします
-![WSUSサーバーの選択](https://user-images.githubusercontent.com/760251/230725567-13e884ba-f23b-492e-a1b9-48d89a65eaf9.png)
 5. 現在の設定値を上書きします。問題が無ければ `次へ` をクリックします
-![WSUS向けのチューニング](https://user-images.githubusercontent.com/760251/230725571-750fd92b-98ff-40eb-9abb-d74209cba58b.png)
 6. 必要に応じて選択してから `次へ` をクリックします
-![残す更新プログラムの選択](https://user-images.githubusercontent.com/760251/230725575-79bf9749-0c7c-4468-9386-4dea9f41b228.png)
 7. 必要に応じて選択してから `次へ` をクリックします
-![更新プログラムを拒否する条件](https://user-images.githubusercontent.com/760251/230725599-a1d62784-31e9-4dab-a746-b3d2a690c4ce.png)
 8. 必要に応じて選択してから `次へ` をクリックします (WSUSの同期スケジュール完了後に動作するようにしてください)
-![実行スケジュール](https://user-images.githubusercontent.com/760251/230725616-d22fbeb7-1ad2-4023-b91d-46734511e11f.png)
 
 
 # ログの確認
