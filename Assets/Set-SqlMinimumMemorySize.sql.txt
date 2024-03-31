@@ -1,0 +1,6 @@
+exec sp_configure 'min server memory',{Value}
+go
+reconfigure
+go
+exec sp_configure 'min server memory'
+go

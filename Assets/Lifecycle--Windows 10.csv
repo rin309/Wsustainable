@@ -1,0 +1,29 @@
+﻿Title,Version,EndDate,NeededProducts,IsPro,IsEnterpriseWithoutLtsc,IsLtsc,VisibleX86,VisibleX64,VisibleArm64
+"Pro, Enterprise, Education",1507,2017/5/8,Windows 10,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Enterprise 2015 LTSB, IoT Enterprise 2015 LTSB",1507,2025/10/14,Windows 10 LTSB,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Pro, Enterprise, Education",1511,2017/10/9,Windows 10,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Enterprise 2016 LTSB, IoT Enterprise 2016 LTSB",1511,2026/10/13,Windows 10 LTSB,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Pro, Pro Education",1607,2018/4/9,Windows 10,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE
+"Enterprise, Education",1607,2019/4/8,Windows 10,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Pro, Pro Education",1703,2018/10/8,Windows 10,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE
+"Enterprise, Education",1703,2019/10/7,Windows 10,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Pro, Pro Education, Pro for Workstations",1709,2019/4/8,Windows 10,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
+"Enterprise, Education",1709,2020/10/12,Windows 10,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Pro, Pro Education, Pro for Workstations",1803,2019/11/11,Windows 10,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
+"Enterprise, Education",1803,2021/5/10,Windows 10,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Pro, Pro Education, Pro for Workstations",1809,2020/11/9,Windows 10,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
+"Enterprise, Education",1809,2021/5/10,Windows 10,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Enterprise LTSC 2019, IoT Enterprise LTSC 2019",1809,2029/1/9,Windows 10 LTSB,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Pro, Pro Education, Pro for Workstations, Enterprise, Education",19H1,2020/12/7,"Windows 10, version 1903 and later",TRUE,TRUE,FALSE,TRUE,TRUE,TRUE
+"Pro, Pro Education, Pro for Workstations",19H2,2021/5/10,"Windows 10, version 1903 and later",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
+"Enterprise, Education",19H2,2022/5/9,"Windows 10, version 1903 and later",FALSE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Pro, Pro Education, Pro for Workstations, Enterprise, Education",20H1,2021/12/13,"Windows 10, version 1903 and later",TRUE,TRUE,FALSE,TRUE,TRUE,TRUE
+"Pro, Pro Education, Pro for Workstations",20H2,2022/5/9,"Windows 10, version 1903 and later",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
+"Enterprise, Education",20H2,2023/5/8,"Windows 10, version 1903 and later",FALSE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Pro, Pro Education, Pro for Workstations, Enterprise, Education",21H1,2022/12/12,"Windows 10, version 1903 and later",TRUE,TRUE,FALSE,TRUE,TRUE,TRUE
+"Pro, Pro Education, Pro for Workstations",21H2,2023/6/13,"Windows 10, version 1903 and later",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
+"Enterprise, Education",21H2,2024/6/11,"Windows 10, version 1903 and later",FALSE,TRUE,FALSE,TRUE,TRUE,FALSE
+Enterprise LTSC 2021,21H2,2027/1/12,Windows 10 LTSB,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE
+IoT Enterprise LTSC 2021,21H2,2032/1/13,Windows 10 LTSB,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Pro, Pro Education, Pro for Workstations",22H2,2025/10/14,"Windows 10, version 1903 and later",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
+"Enterprise, Education",22H2,2025/10/14,"Windows 10, version 1903 and later",FALSE,TRUE,FALSE,TRUE,TRUE,FALSE

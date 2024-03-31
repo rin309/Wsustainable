@@ -1,0 +1,7 @@
+﻿Title,Version,EndDate,NeededProducts,IsPro,IsEnterpriseWithoutLtsc,IsLtsc,VisibleX86,VisibleX64,VisibleArm64
+"Pro, Pro Education, Pro for Workstations",21H2,2023/10/10,Windows 11,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+"Enterprise, Education, IoT Enterprise",21H2,2024/10/8,Windows 11,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE
+"Pro, Pro Education, Pro for Workstations",22H2,2024/10/8,Windows 11,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+"Enterprise, Education, IoT Enterprise",22H2,2025/10/14,Windows 11,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE
+"Pro, Pro Education, Pro for Workstations",23H2,2025/11/11,Windows 11,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+"Enterprise, Education, IoT Enterprise",23H2,2026/11/10,Windows 11,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE

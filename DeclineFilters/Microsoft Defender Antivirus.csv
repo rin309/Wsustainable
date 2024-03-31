@@ -1,0 +1,2 @@
+﻿Filter,RegexMode,Product,Version,Type,Architecture,TargetProductId,TargetClassifications
+(KB2267602 \(Version )(?<Version>.+?)(\) - Current Channel \(Broad\)),Decline Old Version,Microsoft Defender Antivirus,,,,8c3fcc84-7410-4a95-8b89-a166a0190486,

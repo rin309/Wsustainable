@@ -1,0 +1,36 @@
+{
+    "Components":[
+        {
+            "DisplayName": "Windows Server Update Services",
+            "Reason": "Windows Internal Database 環境にて構築します",
+            "DetailsUrl": "https://learn.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus",
+            "WindowsFeatureName": "UpdateServices-WidDB",
+            "TargetOperatingSystemProductType": "Server",
+            "RequiredConnectedToInternet": false
+        },
+        {
+            "DisplayName": "ファイル サーバー リソース マネージャー",
+            "Reason": "クォーターの設定に必要です",
+            "DetailsUrl": "https://docs.microsoft.com/windows-server/storage/fsrm/fsrm-overview",
+            "WindowsFeatureName": "FS-Resource-Manager",
+            "TargetOperatingSystemProductType": "Server",
+            "RequiredConnectedToInternet": false
+        },
+        {
+            "DisplayName": "RSAT: Windows Server Update Services ツール",
+            "Reason": "UpdateServices モジュールを使用するため、管理コンソールをインストールします",
+            "DetailsUrl": "https://learn.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus",
+            "WindowsCapabilityName": "Rsat.WSUS.Tools",
+            "TargetOperatingSystemProductType": "Client",
+            "RequiredConnectedToInternet": true
+        },
+        {
+            "DisplayName": "SQL Server PowerShell モジュール",
+            "Reason": "WSUS の SQL データベース最適化に必要です",
+            "DetailsUrl": "https://learn.microsoft.com/sql/powershell/download-sql-server-ps-module",
+            "PsModuleName": "SqlServer",
+            "TargetOperatingSystemProductType": "Server",
+            "RequiredConnectedToInternet": true
+        }
+    ]
+}

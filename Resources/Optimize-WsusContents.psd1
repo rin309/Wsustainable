@@ -1,0 +1,4 @@
+$OptimizeWsusContentsMessageTable = Data {
+    ConvertFrom-StringData @'
+'@
+}

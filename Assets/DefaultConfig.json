@@ -1,0 +1,118 @@
+﻿{
+    "Config":  {
+                   "Name":  "",
+                   "AdminName":  "",
+                   "AgreeEula": false
+               },
+    "Wsus":  {
+                 "Server":  "localhost",
+                 "Port":  8530,
+                 "IisWsusPoolPath":  "iis:\\AppPools\\WsusPool",
+                 "UseSsl":  false,
+                 "PreferredCulture":  "en"
+             },
+    "RequiresVersion":  "0.2024.331",
+    "UpdatesFindMode":  {
+                            "ApprovedStates":  [
+                                                   "NotApproved",
+                                                   "LatestRevisionApproved"
+                                               ],
+                            "MinimumDate":  "2015/7/1",
+                            "MaximumRetry":  3,
+                            "ForceHalfModePerMonthLength":  2000
+                        },
+    "ChooseVersions":  {
+                            "Windows 11": [],
+                            "Windows 10": [],
+                            "Visual Studio": []
+                       },
+    "ChooseProducts":  {
+                            "Windows 11":  {
+                                "Configure": false,
+                                "FilterType": "Title",
+                                "BusinessUpgrade":  true,
+                                "ConsumerUpgrade":  true,
+                                "ExcludeLanguages": "ja-jp"
+                            },
+                            "Windows 10":  {
+                                "Configure": false,
+                                "FilterType": "Title",
+                                "BusinessUpgrade":  true,
+                                "ConsumerUpgrade":  true,
+                                "ExcludeLanguages": "ja-jp"
+                            },
+                            "Microsoft Edge":  {
+                                                "Configure": false,
+                                                "FilterType": "Title",
+                                                "arm64": true,
+                                                "x64": true,
+                                                "x86": true,
+                                                "Beta": false,
+                                                "Dev":  false,
+                                                "Stable":  false,
+                                                "ExtendedStable":  true,
+                                                "WebView2Runtime":  true,
+                                                "DeclineOldVersion":  true
+                            },
+                            "Malicious Software Removal Tool":  {
+                                "Configure": false,
+                                "FilterType": "Title",
+                                "x64": true,
+                                "x86": true,
+                                "DeclineOldVersion":  true
+                            },
+                            "Microsoft Defender Antivirus":  {
+                                "Configure": false,
+                                "FilterType": "Title",
+                                "DeclineOldVersion":  true
+                            },
+                            "Office":  {
+                                        "Configure": false,
+                                        "FilterType": "Title",
+                                        "x64": true,
+                                        "x86": true
+                            },
+                            "Visual Studio":  {
+                                "Configure": false,
+                                "FilterType": "Title"
+                            }
+                        },
+    "DeclineOptions":  {
+                           "CleanupWizard":  {
+                                                 "CompressUpdates":  true,
+                                                 "CleanupObsoleteUpdates":  true,
+                                                 "CleanupObsoleteComputers":  false,
+                                                 "CleanupUnneededContentFiles":  true,
+                                                 "DeclineExpiredUpdates":  true,
+                                                 "DeclineSupersededUpdates":  true
+                                             },
+                            "ForceDeclineSupersededUpdates": false
+                       },
+    "DeclineRules":  null,
+    "ApproveRules":  null,
+    "MaintenanceSql":  {
+                           "CreateCustomIndexes":  false,
+                           "UpdateStatisticsAndDbccDbReIndex":  false,
+                           "WsusDBMaintenance":  false,
+                           "SqlCmdMode":  "psmodule"
+                       },
+    "ScheduledTask":  {
+                          "Name":  "Optimize-WsusContents"
+                      },
+    "WizardView":  {
+                       "DetectiveInstalledComponents":  true,
+                       "ShowOptionTab":  true,
+                       "ShowServerTab":  true,
+                       "ShowSyncWindowsProductsTab":  true,
+                       "ShowDeclineRuleTab":  true,
+                       "ShowApproveRuleOptionsTab":  false,
+                       "ShowScheduleTab":  true,
+                       "ShowAboutTab":  true
+                   },
+    "Log":  {
+                "IsLogging":  true,
+                "MaximumCount":  10,
+                "Debug":  false,
+                "Verbose":  true
+            }
+}

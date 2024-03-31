@@ -1,0 +1,4 @@
+﻿Filter,RegexMode,Product,Version,Type,Architecture,TargetProductId,TargetClassifications
+.+(version )(?<Version>.+) update,Decline Old Version,Visual Studio,2022,,,12c24e87-bd40-451b-9477-2c2bf501e0d7,
+.+(version )(?<Version>.+) update,Decline Old Version,Visual Studio,2019,,,5f4177e2-ad09-4066-9050-b7466ad5b078,
+.+(version )(?<Version>.+) update,Decline Old Version,Visual Studio,2017,,,682005f1-54fd-440f-b3b3-b9c652351d01,

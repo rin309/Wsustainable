@@ -1,0 +1,568 @@
+﻿<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        mc:Ignorable="d" SnapsToDevicePixels="true" FontSize="14"
+        x:Class="MainWindow" xmlns:local="clr-namespace:View"
+        Title="Wsustainable (PREVIEW)" Height="800" Width="850" MinHeight="550" MinWidth="400" d:Height="2500" Background="{DynamicResource WindowBackgroundBrush}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Assets/Theme.xaml" />
+                <ResourceDictionary Source="Assets/Style.xaml" />
+                <ResourceDictionary Source="Assets/NavigationTab.xaml" />
+                <ResourceDictionary Source="Assets/Indeterminate.xaml" />
+                <ResourceDictionary Source="Assets/ComponentsListView.xaml" />
+                <ResourceDictionary Source="Assets/SyncWindowFeatureUpdateChooser.xaml" />
+                <ResourceDictionary Source="Assets/SyncVisualStudioUpdateChooser.xaml" />
+                <ResourceDictionary Source="Assets/ApproveRuleList.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate x:Key="ProgressStatusDataTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="16"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding Status}" Grid.Column="1" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="CompleteStatusDataTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="16"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="&#xE73E;" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" />
+                    <TextBlock Text="{Binding Status}" Grid.Column="1" />
+                </Grid>
+            </DataTemplate>
+            <BooleanToVisibilityConverter x:Key="BoolToVisiblity"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard_Indeterminate}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TabControl x:Name="MainTabControl">
+                <TabItem x:Name="OptionTab" Tag="追加コンポーネント">
+                    <TabItem.Header>
+                        <PathGeometry>F1 M 16.5,7.5L 16.5,24L 3,24L 9.53674e-007,24L 9.53674e-007,7.5L 16.5,7.5 Z M 1.5,22.5L 15,22.5L 15,9L 1.5,9L 1.5,22.5 Z M 14.25,15.75C 14.25,19.0637 11.5637,21.75 8.24999,21.75C 4.93628,21.75 2.24999,19.0637 2.24999,15.75C 2.24999,12.4363 4.93629,9.75 8.24999,9.75C 11.5637,9.75 14.25,12.4363 14.25,15.75 Z M 3.75,15.75C 3.75,18.2353 5.76472,20.25 8.24999,20.25C 10.7353,20.25 12.75,18.2353 12.75,15.75C 12.75,13.2647 10.7353,11.25 8.24999,11.25C 5.76472,11.25 3.75,13.2647 3.75,15.75 Z M 9.75,15.75C 9.75,16.5784 9.07842,17.25 8.25,17.25C 7.42157,17.25 6.75,16.5784 6.75,15.75C 6.75,14.9216 7.42157,14.25 8.25,14.25C 9.07842,14.25 9.75,14.9216 9.75,15.75 Z M 22.5,9.75L 22.5,24L 18,24L 18,22.5L 21,22.5L 21,13.1042C 20.2039,13.8167 19.1525,14.25 18,14.25L 18,6.00001L 15.5116,6.00001C 16.2244,5.52612 17.0799,5.25 18,5.25C 19.1525,5.25 20.2039,5.68328 21,6.39584L 21,4.50001L 4.5,4.50001L 4.5,6.00001L 3,6.00001L 3,4.50001L 1.5,9.53674e-006L 3,9.53674e-006L 3.75,2.25001L 4.5,5.72205e-006L 21,5.72205e-006L 21.75,2.25001L 22.5,5.72205e-006L 24,5.72205e-006L 22.5,4.50001L 22.5,9.75 Z M 5.02499,3.00001L 20.475,3.00001L 19.95,1.50002L 5.55,1.50002L 5.02499,3.00001 Z</PathGeometry>
+                    </TabItem.Header>
+                    <ScrollViewer>
+                        <StackPanel Margin="{StaticResource TabControlMarginThickness}">
+                            <TextBlock Margin="{StaticResource ContentMargin}" FontSize="{DynamicResource TabControlHeaderFontSize}" Text="WSUS サーバー向け追加コンポーネント" />
+                            <ListBoxItem x:Name="InternetConnectionFailure" Tag="追加コンポーネントにはインターネット接続が必要です" AutomationProperties.HelpText="インターネットに接続されていることをご確認ください" Background="{StaticResource ExclamationBackgroundBrush}" Foreground="{StaticResource ExclamationIconBrush}" BorderBrush="{StaticResource ExclamationIconBrush}" FontWeight="Bold" Visibility="Collapsed" d:Visibility="Visible" Margin="{DynamicResource ContentMargin}" Style="{DynamicResource VerticalListBoxItemContainerStyle}" />
+                            <StackPanel x:Name="ComponentsListContainer" Visibility="Collapsed" d:Visibility="Visible" Margin="{StaticResource FirstContentWithTitleSeparatorMargin}">
+                                <TextBlock Text="コンポーネント" FontWeight="Bold" Margin="{StaticResource ContentMargin}" />
+                                <ItemsControl x:Name="ComponentsListView" Grid.Row="1" ItemsSource="{Binding}" ItemTemplate="{DynamicResource ComponentsListViewItemDataTemplate}" >
+                                    <ItemsControl.ItemContainerStyle>
+                                        <Style TargetType="{x:Type ContentPresenter}">
+                                            <Setter Property="IsEnabled" Value="{Binding IsEnabled}" />
+                                        </Style>
+                                    </ItemsControl.ItemContainerStyle>
+                                </ItemsControl>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem x:Name="ServerChooserTab" Tag="サーバーの選択">
+                    <TabItem.Header>
+                        <PathGeometry>M 0,19.5L 0,0L 10.5,0L 10.5,5.73853L 8.99999,5.93854L 9,1.5L 1.5,1.5L 1.5,18L 4.9427,18L 4.9427,19.5L 0,19.5 Z M 7.5,4.5L 3,4.5L 3,3L 7.5,3L 7.5,4.5 Z M 3,15L 4.9427,15L 4.9427,16.5L 3,16.5L 3,15 Z M 3,13.5L 3,12L 4.9427,12L 4.9427,13.5L 3,13.5 Z M 19.3483,9.40393L 19.3483,13.0858L 15.6665,13.0858L 15.6665,11.8585L 17.489,11.8585C 17.2006,11.4739 16.8421,11.1733 16.4136,10.9564C 15.9851,10.7396 15.5315,10.6312 15.0528,10.6312C 14.6765,10.6312 14.3206,10.6951 13.9851,10.823C 13.6497,10.9508 13.3474,11.1283 13.0785,11.3553C 12.8095,11.5823 12.5855,11.8524 12.4065,12.1653C 12.2276,12.4783 12.1064,12.8199 12.043,13.1901L 10.8249,12.9814C 10.9149,12.4619 11.0877,11.9848 11.3434,11.5502C 11.5991,11.1155 11.9136,10.7386 12.2869,10.4195C 12.6602,10.1004 13.0836,9.85138 13.5571,9.67242C 14.0306,9.49341 14.5292,9.40393 15.0528,9.40393C 15.6338,9.40393 16.1896,9.51746 16.7204,9.74451C 17.2512,9.97156 17.7181,10.2958 18.121,10.7172L 18.121,9.40393L 19.3483,9.40393 Z M 15.0528,16.7676C 15.4231,16.7676 15.778,16.7037 16.1175,16.5758C 16.457,16.448 16.7608,16.2706 17.0288,16.0435C 17.2967,15.8165 17.5202,15.5464 17.6991,15.2335C 17.8781,14.9205 17.9993,14.579 18.0627,14.2087L 19.2808,14.4174C 19.1908,14.9349 19.018,15.4109 18.7623,15.8456C 18.5066,16.2803 18.1921,16.6577 17.8188,16.9778C 17.4455,17.2979 17.0221,17.5474 16.5486,17.7264C 16.0751,17.9054 15.5765,17.9949 15.0528,17.9949C 14.4719,17.9949 13.9161,17.8813 13.3853,17.6543C 12.8545,17.4272 12.3876,17.103 11.9847,16.6817L 11.9847,17.9949L 10.7574,17.9949L 10.7574,14.313L 14.4392,14.313L 14.4392,15.5403L 12.6167,15.5403C 12.9051,15.9228 13.2636,16.223 13.6921,16.4408C 14.1206,16.6587 14.5742,16.7676 15.0528,16.7676 Z M 24,22.35L 24,5.13409L 6,7.58862L 6,19.8954L 24,22.35 Z M 7.22727,8.88409L 22.7557,6.4295L 22.7557,21.1398L 7.22727,18.6852L 7.22727,8.88409 Z</PathGeometry>
+                    </TabItem.Header>
+                    <ScrollViewer>
+                        <StackPanel Margin="{StaticResource TabControlMarginThickness}">
+                            <TextBlock Margin="{DynamicResource ContentMargin}" FontSize="{DynamicResource TabControlHeaderFontSize}" Text="WSUS サーバーの選択"/>
+                            <ItemsControl ItemContainerStyle="{DynamicResource VerticalListBoxItemContainerStyle}">
+                                <ListBoxItem Tag="対象の WSUS サーバー" Style="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                    <WrapPanel>
+                                        <TextBox x:Name="WsusServerTextBox" Width="150" Text="{Binding Server}"/>
+                                        <TextBlock Text=":" VerticalAlignment="Center"/>
+                                        <WindowsFormsHost>
+                                            <forms:NumericUpDown x:Name="WsusServerPortTextBox" Minimum="1" Maximum="65535" Value="8530"/>
+                                        </WindowsFormsHost>
+                                    </WrapPanel>
+                                </ListBoxItem>
+                                <ListBoxItem Tag="SSL" Style="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                    <CheckBox x:Name="WsusServerUseSslCheckBox" HorizontalAlignment="Right" IsChecked="{Binding UseSsl}" />
+                                </ListBoxItem>
+                                <ListBoxItem Tag="WSUS サーバーへの接続テストとインストール済み機能の確認" AutomationProperties.HelpText="必ず確認してください">
+                                    <Button x:Name="TestConnectionWsusServerButton" Content="実行"/>
+                                </ListBoxItem>
+                                <ListBoxItem x:Name="AllConnectionSuccessfully" Tag="WSUS サーバーに接続できました" Background="{StaticResource InformationBackgroundBrush}" Foreground="{StaticResource InformationIconBrush}" BorderBrush="{StaticResource InformationIconBrush}"  FontWeight="Bold" Style="{DynamicResource MinimumVerticalListBoxItemContainerStyle}" Visibility="Collapsed" d:Visibility="Visible" />
+                                <ListBoxItem x:Name="WsusServerConnectionFailure" Tag="WSUS サーバーに接続できませんでした" AutomationProperties.HelpText="指定したサーバー名とポート番号で接続できるかご確認ください" Background="{StaticResource ExclamationBackgroundBrush}" Foreground="{StaticResource ExclamationIconBrush}" BorderBrush="{StaticResource ExclamationIconBrush}" FontWeight="Bold" Visibility="Collapsed" d:Visibility="Visible" />
+                                <ListBoxItem x:Name="IisConnectionFailure" Tag="IIS WsusPool アプリケーションに接続できませんでした (オプション)" AutomationProperties.HelpText="ローカルに IIS がインストールされているかご確認ください" Background="{StaticResource ExclamationBackgroundBrush}" Foreground="{StaticResource ExclamationIconBrush}" BorderBrush="{StaticResource ExclamationIconBrush}" FontWeight="Bold" Visibility="Collapsed" d:Visibility="Visible" />
+                                <ListBoxItem x:Name="SqlConnectionFailure" Tag="SQL データベースに接続できませんでした (オプション)" AutomationProperties.HelpText="ローカルの Windows Internal Database に接続できるかご確認ください" Background="{StaticResource ExclamationBackgroundBrush}" Foreground="{StaticResource ExclamationIconBrush}" BorderBrush="{StaticResource ExclamationIconBrush}" FontWeight="Bold" Visibility="Collapsed" d:Visibility="Visible" />
+                            </ItemsControl>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem x:Name="ServerConfigTab" Tag="サーバーの構成">
+                    <TabItem.Header>
+                        <PathGeometry>F1 M 22.0265,3.09979C 22.2201,3.43271 22.396,3.75028 22.5542,4.0525C 22.7124,4.35472 22.8505,4.66107 22.9685,4.97156C 23.0866,5.28205 23.1769,5.60493 23.2395,5.94021C 23.3021,6.27548 23.3333,6.64264 23.3333,7.04167C 23.3333,7.62486 23.2578,8.18739 23.1067,8.72927C 22.9556,9.27114 22.7419,9.77819 22.4656,10.2504C 22.1894,10.7226 21.8553,11.1541 21.4633,11.5449C 21.0714,11.9357 20.6393,12.2698 20.1671,12.5472C 19.6949,12.8246 19.1878,13.0389 18.6459,13.19C 18.1041,13.3411 17.5415,13.4167 16.9583,13.4167C 16.7883,13.4167 16.6166,13.409 16.443,13.3936C 16.2695,13.3783 16.0977,13.3565 15.9277,13.3281L 7.00979,22.2496C 6.65563,22.6037 6.25129,22.8729 5.79677,23.0571C 5.34226,23.2412 4.86827,23.3333 4.37479,23.3333C 3.86479,23.3333 3.3849,23.2353 2.93511,23.0394C 2.48531,22.8434 2.09278,22.5778 1.7575,22.2425C 1.42222,21.9072 1.1566,21.5147 0.960627,21.0649C 0.764655,20.6151 0.666669,20.1352 0.666669,19.6252C 0.666669,19.1317 0.758752,18.6577 0.942919,18.2032C 1.12709,17.7487 1.39625,17.3444 1.75042,16.9902L 10.6719,8.07229C 10.6435,7.90229 10.6217,7.73052 10.6064,7.55698C 10.591,7.38344 10.5833,7.21166 10.5833,7.04167C 10.5833,6.45847 10.6589,5.89594 10.81,5.35406C 10.9611,4.81219 11.1754,4.30514 11.4528,3.83291C 11.7302,3.36069 12.0643,2.92861 12.4551,2.53667C 12.8459,2.14472 13.2774,1.81063 13.7496,1.53438C 14.2218,1.25813 14.7289,1.04444 15.2707,0.893333C 15.8126,0.742224 16.3751,0.666666 16.9583,0.666666C 17.3574,0.666666 17.7245,0.697952 18.0598,0.760521C 18.3951,0.82309 18.718,0.913404 19.0284,1.03146C 19.3389,1.14951 19.6453,1.28764 19.9475,1.44583C 20.2497,1.60403 20.5673,1.77993 20.9002,1.97354L 16.5369,6.33333L 17.6667,7.46312L 22.0265,3.09979 Z M 16.9583,12C 17.6454,12 18.2894,11.869 18.8903,11.6069C 19.4912,11.3448 20.0148,10.9906 20.461,10.5444C 20.9073,10.0981 21.2615,9.57455 21.5235,8.97364C 21.7856,8.37274 21.9167,7.72875 21.9167,7.04167C 21.9167,6.50333 21.8281,5.98271 21.651,5.47979L 17.6667,9.45354L 14.5465,6.33333L 18.5202,2.34896C 18.0173,2.17188 17.4967,2.08333 16.9583,2.08333C 16.2713,2.08333 15.6273,2.21437 15.0264,2.47646C 14.4255,2.73854 13.9019,3.09271 13.4556,3.53896C 13.0094,3.98521 12.6552,4.50878 12.3931,5.10969C 12.131,5.71059 12,6.35458 12,7.04167C 12,7.29903 12.0224,7.54989 12.0673,7.79427C 12.1122,8.03864 12.1641,8.28243 12.2231,8.52562L 2.75979,17.9996C 2.54493,18.2121 2.37847,18.4588 2.26042,18.7398C 2.14236,19.0208 2.08334,19.3159 2.08334,19.6252C 2.08334,19.9345 2.14413,20.2297 2.26573,20.5106C 2.38733,20.7916 2.55143,21.0354 2.75802,21.242C 2.96462,21.4486 3.20841,21.6127 3.48938,21.7343C 3.77035,21.8559 4.06549,21.9167 4.37479,21.9167C 4.6841,21.9167 4.97924,21.8576 5.26021,21.7396C 5.54118,21.6215 5.78792,21.4551 6.00042,21.2402L 15.4744,11.7769C 15.7176,11.8359 15.9614,11.8878 16.2057,11.9327C 16.4501,11.9776 16.701,12 16.9583,12 Z</PathGeometry>
+                    </TabItem.Header>
+                    <ScrollViewer>
+                        <StackPanel Margin="{StaticResource TabControlMarginThickness}">
+                            <TextBlock Margin="{DynamicResource ContentMargin}" FontSize="{DynamicResource TabControlHeaderFontSize}" Text="WSUS 向けのチューニング"/>
+
+                            <StackPanel x:Name="FileQuotaContainer" Visibility="Collapsed" d:Visibility="Visible" Margin="{StaticResource FirstContentWithTitleSeparatorMargin}">
+                                <TextBlock Text="クォーター" FontWeight="Bold" Margin="{DynamicResource ContentMargin}" />
+                                <Expander x:Name="ConfigureFileQuotaExpander" Style="{DynamicResource CheckedMinimumExpanderStyle}" Header="クォーターを構成する" d:IsExpanded="True" IsExpanded="{Binding Configure, Mode=TwoWay}">
+                                    <StackPanel>
+                                        <ItemsControl ItemContainerStyle="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                            <ListBoxItem Tag="最大値 (GB)" Style="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                                <WindowsFormsHost>
+                                                    <forms:NumericUpDown x:Name="QuotaSizeTextBox" Minimum="10" Maximum="10" Increment="10" ThousandsSeparator="True" Value="10"/>
+                                                </WindowsFormsHost>
+                                            </ListBoxItem>
+                                        </ItemsControl>
+                                        <Grid x:Name="WsusDataSizeContainer">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <ListBoxItem x:Name="WsusContentDriveInformationListBoxItem" Tag="WSUS がインストールされているドライブ" AutomationProperties.HelpText="{Binding}" Style="{DynamicResource VerticalListBoxItemContainerStyle}" Background="Transparent" BorderBrush="Transparent" Grid.Column="0" />
+                                            <ListBoxItem x:Name="WsusContentFolderInformationListBoxItem" Tag="WSUS がインストールされているフォルダー" AutomationProperties.HelpText="{Binding}" Style="{DynamicResource VerticalListBoxItemContainerStyle}" Background="Transparent" BorderBrush="Transparent" Grid.Column="1" />
+                                        </Grid>
+                                    </StackPanel>
+                                </Expander>
+                            </StackPanel>
+
+                            <StackPanel Margin="{StaticResource FirstContentWithTitleSeparatorMargin}">
+                                <TextBlock FontWeight="Bold" Margin="{StaticResource ContentMargin}" Text="IIS WsusPool アプリケーション" />
+                                <ItemsControl ItemContainerStyle="{DynamicResource VerticalListBoxItemContainerStyle}" >
+                                    <ListBoxItem Tag="パス" Style="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                        <TextBox x:Name="IisWsusPoolTextBox" Width="300" Text="{Binding IisWsusPoolPath}" IsReadOnly="True"/>
+                                    </ListBoxItem>
+                                </ItemsControl>
+                                <ItemsControl x:Name="WsusPoolApplicationContainer" Visibility="Collapsed" d:Visibility="Visible" ItemContainerStyle="{DynamicResource VerticalListBoxItemContainerStyle}" >
+                                    <ListBoxItem x:Name="WsusQueueLengthLabel" Tag="(全般)\キューの長さ" AutomationProperties.HelpText="{Binding}">
+                                        <WindowsFormsHost>
+                                            <forms:NumericUpDown x:Name="WsusQueueLengthTextBox" Minimum="10" Maximum="65535" Increment="1000" ThousandsSeparator="True"  Value="2000"/>
+                                        </WindowsFormsHost>
+                                    </ListBoxItem>
+                                    <ListBoxItem x:Name="WsusCpuLimitLabel" Tag="CPU\制限 (%)" AutomationProperties.HelpText="{Binding}">
+                                        <WindowsFormsHost>
+                                            <forms:NumericUpDown x:Name="WsusCpuLimitTextBox" Maximum="100" Increment="10" ThousandsSeparator="True" Value="0"/>
+                                        </WindowsFormsHost>
+                                    </ListBoxItem>
+                                    <ListBoxItem x:Name="WsusRapidFailProtectionIntervalLabel" Tag="ラピッド フェール保護\エラー間隔" AutomationProperties.HelpText="{Binding}">
+                                        <WindowsFormsHost>
+                                            <forms:NumericUpDown x:Name="WsusRapidFailProtectionIntervalTextBox" Maximum="100" Increment="10" ThousandsSeparator="True" Value="30"/>
+                                        </WindowsFormsHost>
+                                    </ListBoxItem>
+                                    <ListBoxItem x:Name="WsusRapidFailProtectionMaxCrashesLabel" Tag="ラピッド フェール保護\最大エラー数" AutomationProperties.HelpText="{Binding}">
+                                        <WindowsFormsHost>
+                                            <forms:NumericUpDown x:Name="WsusRapidFailProtectionMaxCrashesTextBox" Maximum="100" Increment="10" ThousandsSeparator="True" Value="60"/>
+                                        </WindowsFormsHost>
+                                    </ListBoxItem>
+                                    <ListBoxItem x:Name="WsusPeriodicRestartPrivateMemoryLabel" Tag="リサイクル\プライベートメモリ制限 (KB)" AutomationProperties.HelpText="{Binding}">
+                                        <WindowsFormsHost>
+                                            <forms:NumericUpDown x:Name="WsusPeriodicRestartPrivateMemoryTextBox" Maximum="4294967295" Increment="1000000" ThousandsSeparator="True" Value="8000000"/>
+                                        </WindowsFormsHost>
+                                    </ListBoxItem>
+                                    <ListBoxItem x:Name="WsusPeriodicRestartMemoryLabel" Tag="リサイクル\仮想メモリ制限 (KB)" AutomationProperties.HelpText="{Binding}">
+                                        <WindowsFormsHost>
+                                            <forms:NumericUpDown x:Name="WsusPeriodicRestartMemoryTextBox" Maximum="4294967295" Increment="1000000" ThousandsSeparator="True" Value="0"/>
+                                        </WindowsFormsHost>
+                                    </ListBoxItem>
+                                </ItemsControl>
+                            </StackPanel>
+
+                            <TextBlock FontWeight="Bold" Margin="{StaticResource ContentMargin}" Text="SQL データベース"/>
+                            <ItemsControl ItemContainerStyle="{DynamicResource VerticalListBoxItemContainerStyle}">
+                                <ListBoxItem Tag="パス" Style="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                    <TextBox x:Name="ServerInstancePathTextBox" Width="300" Text="{Binding .}" IsReadOnly="True"/>
+                                </ListBoxItem>
+                            </ItemsControl>
+                            <ItemsControl x:Name="SqlContainer" Visibility="Collapsed" d:Visibility="Visible" ItemContainerStyle="{DynamicResource VerticalListBoxItemContainerStyle}" >
+                                <ListBoxItem x:Name="SqlMinimumMemoryLabel" Tag="最小サーバー メモリ (MB)" AutomationProperties.HelpText="{Binding}">
+                                    <WindowsFormsHost>
+                                        <forms:NumericUpDown x:Name="SqlMinimumMemoryTextBox" Increment="1024" ThousandsSeparator="True" Value="1024" Maximum="16384"/>
+                                    </WindowsFormsHost>
+                                </ListBoxItem>
+                                <ListBoxItem Tag="データベースの統計情報の更新とインデックスの再構築" AutomationProperties.HelpText="統計情報の更新クエリとインデックスの再構築を実行します" Visibility="Collapsed" d:Visibility="Visible">
+                                    <CheckBox x:Name="UseSqlCreateCustomIndexesCheckBox" HorizontalAlignment="Right" IsChecked="{Binding CreateCustomIndexes, Mode=TwoWay}"/>
+                                </ListBoxItem>
+                            </ItemsControl>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem x:Name="SyncWindowsProductsTab" Tag="使用する製品">
+                    <TabItem.Header>
+                        <PathGeometry>M 23,23L 23,1.78409L 1,5.23864L 1,19.5455L 23,23 Z M 2.22727,6.5341L 21.7557,3.07955L 21.7557,21.7898L 2.22727,18.3352L 2.22727,6.5341 Z</PathGeometry>
+                    </TabItem.Header>
+                    <ScrollViewer>
+                        <StackPanel Margin="{StaticResource TabControlMarginThickness}">
+                            <TextBlock Margin="{StaticResource ContentMargin}" FontSize="{DynamicResource TabControlHeaderFontSize}" Text="使用する製品とバージョン"/>
+                            <WrapPanel Margin="{StaticResource ContentMargin}" >
+                                <CheckBox x:Name="SyncWindowsShowEndOfSupportProductsCheckBox" Content="サポート終了製品を表示"/>
+                                <CheckBox x:Name="SyncWindowsShowArchitectureCheckBox" Content="システムの種類を選択" />
+                            </WrapPanel>
+
+                            <TextBlock Text="Windows" FontWeight="Bold" Margin="{StaticResource ContentWithTitleSeparatorMargin}" />
+                            <WrapPanel>
+                                <RadioButton x:Name="SyncWindowsShowProOnlyRadioButton" Content="Proのみ" IsChecked="True" />
+                                <RadioButton x:Name="SyncWindowsShowEnterpriseWithoutLtscOnlyRadioButton" Content="LTSCを除くEnterpriseのみ" />
+                                <RadioButton x:Name="SyncWindowsShowLtscOnlyToggleButton" Content="LTSCのみの選択に切り替え" Style="{StaticResource {x:Type ToggleButton}}" />
+                            </WrapPanel>
+
+                            <Grid x:Name="SyncWindows11Container">
+                                <Expander x:Name="SyncWindows11Expander" Style="{DynamicResource CheckedMinimumExpanderStyle}" Header="Windows 11 を構成する" d:IsExpanded="True" IsExpanded="{Binding Configure, Mode=TwoWay}">
+                                    <StackPanel>
+                                        <ItemsControl x:Name="SyncWindowsProductsWindows11Lists" ItemTemplate="{DynamicResource SyncWindowFeatureUpdateChooser}" ItemsSource="{Binding}" />
+                                        <ItemsControl ItemContainerStyle="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                            <ListBoxItem Tag="機能更新プログラムの配布" Margin="0">
+                                                <WrapPanel>
+                                                    <CheckBox x:Name="SyncWindows11BusinessCheckBox" Content="ボリュームライセンス" IsChecked="{Binding BusinessUpgrade, Mode=TwoWay}"/>
+                                                    <CheckBox x:Name="SyncWindows11ConsumerCheckBox" Content="OEM・DSP" IsChecked="{Binding ConsumerUpgrade, Mode=TwoWay}"/>
+                                                </WrapPanel>
+                                            </ListBoxItem>
+                                            <ListBoxItem x:Name="SyncWindows11LanguagesLabel" Tag="言語" AutomationProperties.HelpText="{Binding ExcludeLanguages}" Style="{DynamicResource VerticalListBoxItemContainerStyle}" Margin="0">
+                                                <Button x:Name="SyncWindows11LanguagesEditButton" Content="編集" />
+                                            </ListBoxItem>
+                                        </ItemsControl>
+                                    </StackPanel>
+                                </Expander>
+                            </Grid>
+                            <Grid x:Name="SyncWindows10Container" d:Visibility="Visible" Visibility="Collapsed">
+                                <Expander x:Name="SyncWindows10Expander" Style="{DynamicResource CheckedExpanderStyle}" Header="Windows 10 を構成する" AutomationProperties.HelpText="提供終了日: 2025/10/13" d:IsExpanded="True" IsExpanded="{Binding Configure, Mode=TwoWay}">
+                                    <StackPanel>
+                                        <ItemsControl x:Name="SyncWindowsProductsWindows10Lists" ItemTemplate="{DynamicResource SyncWindowFeatureUpdateChooser}" ItemsSource="{Binding}" />
+                                        <ItemsControl ItemContainerStyle="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                            <ListBoxItem Tag="機能更新プログラムの配布" Margin="0">
+                                                <WrapPanel>
+                                                    <CheckBox x:Name="SyncWindows10BusinessCheckBox" Content="ボリュームライセンス" IsChecked="{Binding BusinessUpgrade, Mode=TwoWay}"/>
+                                                    <CheckBox x:Name="SyncWindows10ConsumerCheckBox" Content="OEM・DSP" IsChecked="{Binding ConsumerUpgrade, Mode=TwoWay}"/>
+                                                </WrapPanel>
+                                            </ListBoxItem>
+                                            <ListBoxItem Tag="言語" AutomationProperties.HelpText="{Binding ExcludeLanguages}" Style="{DynamicResource VerticalListBoxItemContainerStyle}" Margin="0">
+                                                <Button x:Name="SyncWindows10LanguagesEditButton" Content="編集" />
+                                            </ListBoxItem>
+                                        </ItemsControl>
+                                    </StackPanel>
+                                </Expander>
+                            </Grid>
+                            <TextBlock Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Margin="{StaticResource ContentWithTitleSeparatorMargin}"><Run Text="サポート終了日は参考です。最新の情報は "/><Hyperlink x:Name="FindLifecycleProductsHyperlink" NavigateUri="https://docs.microsoft.com/ja-jp/lifecycle/products/"><Run Text="製品およびサービスのライフサイクル情報の検索"/></Hyperlink><Run Text=" をご覧ください。"/></TextBlock>
+                            <TextBlock Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Margin="{StaticResource ContentMargin}"><Run FontWeight="Bold" Language="ja-jp" Text="このスクリプトにおける拒否基準"/><LineBreak/><Run Text="Pro・Enterpriseの機能更新プログラムを選択した場合は、選択したバージョンより古い機能更新プログラムが拒否されます。"/><LineBreak/><Run Text="LTSCのみを選択した場合は、選択したバージョン以外が拒否されます。"/></TextBlock>
+
+                            <TextBlock Text="その他" FontWeight="Bold" Margin="{StaticResource ContentWithTitleSeparatorMargin}" />
+                            <Grid x:Name="SyncEdgeContainer">
+                                <Expander x:Name="SyncEdgeExpander" Style="{DynamicResource CheckedMinimumExpanderStyle}" Header="Microsoft Edge (Chromium) を構成する" d:IsExpanded="True" IsExpanded="{Binding Configure, Mode=TwoWay}">
+                                    <ItemsControl ItemContainerStyle="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                        <ListBoxItem x:Name="SyncEdgeConfigureArchitectureContainer" Tag="システムの種類" Margin="0">
+                                            <WrapPanel HorizontalAlignment="Right">
+                                                <CheckBox x:Name="SyncWindowsChooseMsEdgeX64CheckBox" Content="64ビット" IsChecked="{Binding x64, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncWindowsChooseMsEdgeX86CheckBox" Content="32ビット" IsChecked="{Binding x86, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncWindowsChooseMsEdgeArm64CheckBox" Content="ARM64ビット" IsChecked="{Binding arm64, Mode=TwoWay}"/>
+                                            </WrapPanel>
+                                        </ListBoxItem>
+                                        <ListBoxItem Tag="チャネル" Margin="0">
+                                            <WrapPanel MaxWidth="300">
+                                                <CheckBox x:Name="SyncEdgeBetaCheckBox" Content="Beta" Style="{DynamicResource UnCheckBoxStyle}" IsChecked="{Binding Beta, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncEdgeDevCheckBox" Content="Dev" Style="{DynamicResource UnCheckBoxStyle}" IsChecked="{Binding Dev, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncEdgeStableCheckBox" Content="Stable" Style="{DynamicResource UnCheckBoxStyle}" IsChecked="{Binding Stable, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncEdgeExtendStableCheckBox" Content="Extended Stable" Style="{DynamicResource UnCheckBoxStyle}" IsChecked="{Binding ExtendedStable, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncEdgeWebView2RuntimeCheckBox" Content="WebView2 Runtime" Style="{DynamicResource UnCheckBoxStyle}" IsChecked="{Binding WebView2Runtime, Mode=TwoWay}"/>
+                                            </WrapPanel>
+                                        </ListBoxItem>
+                                        <ListBoxItem Tag="最新版のみを使用する" AutomationProperties.HelpText="旧バージョンを拒否します" Style="{DynamicResource VerticalListBoxItemContainerStyle}" Margin="0">
+                                            <CheckBox x:Name="DeclineEdgeOldVersionCheckBox" HorizontalAlignment="Right" IsChecked="{Binding DeclineOldVersion, Mode=TwoWay}"/>
+                                        </ListBoxItem>
+                                    </ItemsControl>
+                                </Expander>
+                            </Grid>
+                            <Grid x:Name="SyncMrtContainer">
+                                <Expander x:Name="SyncMrtExpander" Style="{DynamicResource CheckedMinimumExpanderStyle}" Header="悪意のあるソフトウェアの削除ツールを構成する" d:IsExpanded="True" IsExpanded="{Binding Configure, Mode=TwoWay}">
+                                    <ItemsControl ItemContainerStyle="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                        <ListBoxItem x:Name="SyncMrtConfigureArchitectureContainer" Tag="システムの種類" Margin="0">
+                                            <WrapPanel HorizontalAlignment="Right">
+                                                <CheckBox x:Name="SyncMrtX64CheckBox" Content="64ビット" IsChecked="{Binding x64, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncMrtX86CheckBox" Content="32ビット" IsChecked="{Binding x86, Mode=TwoWay}"/>
+                                            </WrapPanel>
+                                        </ListBoxItem>
+                                        <ListBoxItem Tag="最新版のみを使用する" AutomationProperties.HelpText="旧バージョンを拒否します" Style="{DynamicResource VerticalListBoxItemContainerStyle}" Margin="0">
+                                            <CheckBox x:Name="DeclineMrtOldVersionCheckBox" HorizontalAlignment="Right" IsChecked="{Binding DeclineOldVersion, Mode=TwoWay}"/>
+                                        </ListBoxItem>
+                                    </ItemsControl>
+                                </Expander>
+                            </Grid>
+                            <Grid x:Name="SyncDefenderAntivirusContainer">
+                                <Expander x:Name="SyncDefenderAntivirusExpander" Style="{DynamicResource CheckedMinimumExpanderStyle}" Header="Defender Antivirusを構成する" d:IsExpanded="True" IsExpanded="{Binding Configure, Mode=TwoWay}">
+                                    <ItemsControl ItemContainerStyle="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                        <ListBoxItem Tag="最新版のみを使用する" AutomationProperties.HelpText="旧バージョンを拒否します" Style="{DynamicResource VerticalListBoxItemContainerStyle}" Margin="0">
+                                            <CheckBox x:Name="DeclineDefenderAntivirusOldVersionCheckBox" HorizontalAlignment="Right" IsChecked="{Binding DeclineOldVersion, Mode=TwoWay}"/>
+                                        </ListBoxItem>
+                                    </ItemsControl>
+                                </Expander>
+                            </Grid>
+                            <Grid x:Name="SyncOfficeContainer">
+                                <Expander x:Name="SyncOfficeExpander" Style="{DynamicResource CheckedExpanderStyle}" Header="Office を構成する" AutomationProperties.HelpText="Windows インストーラー版のみ・Office 2016以降は対象外" d:IsExpanded="True" IsExpanded="{Binding Configure, Mode=TwoWay}">
+                                    <ItemsControl ItemContainerStyle="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                        <ListBoxItem x:Name="SyncOfficeConfigureArchitectureContainer" Tag="システムの種類" Margin="0">
+                                            <WrapPanel>
+                                                <CheckBox x:Name="SyncOfficeX64CheckBox" Content="64ビット" IsChecked="{Binding x64, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncOfficeX86CheckBox" Content="32ビット" IsChecked="{Binding x86, Mode=TwoWay}"/>
+                                            </WrapPanel>
+                                        </ListBoxItem>
+                                    </ItemsControl>
+                                </Expander>
+                            </Grid>
+                            <Grid x:Name="SyncVisualStudioContainer" d:Visibility="Visible" Visibility="Collapsed">
+                                <Expander x:Name="SyncVisualStudioExpander" Style="{DynamicResource CheckedMinimumExpanderStyle}" Header="Visual Studio を構成する" AutomationProperties.HelpText="" d:IsExpanded="True" IsExpanded="{Binding Configure, Mode=TwoWay}">
+                                    <ItemsControl x:Name="SyncVisualStudioLists" ItemTemplate="{DynamicResource SyncVisualStudioUpdateChooser}" ItemsSource="{Binding}" />
+                                </Expander>
+                            </Grid>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem x:Name="DeclineRuleTab" Tag="拒否する条件">
+                    <TabItem.Header>
+                        <PathGeometry>F1 M 23.25,0.150002C 23.4525,0.150002 23.6281,0.224375 23.7769,0.373129C 23.9256,0.521875 24,0.697502 24,0.900002C 24,1.1025 23.9262,1.27875 23.7787,1.42875L 15.2212,9.9825C 15.6437,10.52 15.9625,11.1056 16.1775,11.7394C 16.3925,12.3731 16.5,13.03 16.5,13.71C 16.5,14.5125 16.3475,15.2831 16.0425,16.0219C 15.7375,16.7606 15.3,17.415 14.73,17.985L 13.935,18.7838L 11.2725,24.1012L 0.0487315,12.8775L 5.36623,10.215L 6.16498,9.42C 6.73498,8.85 7.38935,8.4125 8.12811,8.1075C 8.86685,7.8025 9.63748,7.65 10.44,7.65C 11.12,7.65 11.7769,7.7575 12.4106,7.9725C 13.0444,8.1875 13.63,8.50625 14.1675,8.92875L 22.7212,0.371252C 22.8712,0.223753 23.0475,0.150002 23.25,0.150002 Z M 12.5287,18.2325L 5.91748,11.6213L 2.57998,13.2863L 10.8637,21.57L 12.5287,18.2325 Z M 13.5,17.085C 13.9775,16.615 14.3469,16.1044 14.6081,15.5531C 14.8694,15.0019 15,14.3875 15,13.71C 15,13.075 14.8806,12.4825 14.6419,11.9325C 14.4031,11.3825 14.0769,10.9006 13.6631,10.4869C 13.2494,10.0731 12.7675,9.74688 12.2175,9.50813C 11.6675,9.26938 11.075,9.15 10.44,9.15C 9.76248,9.15 9.1481,9.27875 8.59686,9.53625C 8.0456,9.79375 7.53498,10.165 7.06498,10.65L 13.5,17.085 Z</PathGeometry>
+                    </TabItem.Header>
+                    <ScrollViewer>
+                        <StackPanel Margin="{StaticResource TabControlMarginThickness}">
+                            <TextBlock Margin="{StaticResource ContentMargin}" FontSize="{DynamicResource TabControlHeaderFontSize}" Text="更新プログラムを拒否する条件"/>
+                            <TextBlock Text="クリーンアップウィザード" FontWeight="Bold" Margin="{StaticResource ContentMargin}"/>
+                            <ItemsControl ItemContainerStyle="{DynamicResource VerticalListBoxItemContainerStyle}" >
+                                <ListBoxItem Tag="不要な更新および更新のリビジョン" AutomationProperties.HelpText="レプリカ構成にしている場合は下位のサーバーのみ有効にします">
+                                    <CheckBox x:Name="UseWsusCleanupWizardWithCompressUpdateCheckBox" HorizontalAlignment="Right" IsChecked="{Binding CompressUpdates, Mode=TwoWay}"/>
+                                </ListBoxItem>
+                                <ListBoxItem Tag="不要な更新ファイル・期限切れの更新・置き換えられた更新" AutomationProperties.HelpText="レプリカ構成にしている場合は上位のサーバーのみ有効にします">
+                                    <CheckBox x:Name="UseWsusCleanupWizardOthersCheckBox" HorizontalAlignment="Right"/>
+                                </ListBoxItem>
+                            </ItemsControl>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem x:Name="ApproveRuleOptionsTab" Tag="承認する条件" Visibility="Collapsed" d:Visibility="Visible">
+                    <TabItem.Header>
+                        <PathGeometry>F1 M 24,4.65L 24,6.15L 9,6.15L 9,4.65L 24,4.65 Z M 9,9.15L 24,9.15L 24,10.65L 9,10.65L 9,9.15 Z M 9,13.65L 24,13.65L 24,15.15L 9,15.15L 9,13.65 Z M 9,18.15L 24,18.15L 24,19.65L 9,19.65L 9,18.15 Z M 5.6025,11.7525L 6.3975,12.5475L 2.25,16.695L 0.164996,14.61L 0.959997,13.815L 2.25,15.1013L 5.6025,11.7525 Z M 5.6025,2.7525L 6.3975,3.5475L 2.25,7.695L 0.164996,5.61L 0.959997,4.815L 2.25,6.10125L 5.6025,2.7525 Z</PathGeometry>
+                    </TabItem.Header>
+                    <ScrollViewer>
+                        <StackPanel Margin="{StaticResource TabControlMarginThickness}">
+                            <TextBlock Margin="{StaticResource ContentMargin}" FontSize="{DynamicResource TabControlHeaderFontSize}"><Run Text=""/><Run Text="更新プログラムを承認する条件"/></TextBlock>
+                            <ItemsControl ItemContainerStyle="{DynamicResource MinimumVerticalListBoxItemContainerStyle}" Margin="{DynamicResource ContentMargin}">
+                                <ListBoxItem Tag="クライアントから要求のあった更新プログラムを、指定された日にち経過後に承認する">
+                                    <CheckBox HorizontalAlignment="Right" />
+                                </ListBoxItem>
+                                <ListBoxItem Tag="新しい条件を追加する">
+                                    <Button x:Name="ApproveRuleAddButton" Content="追加" />
+                                </ListBoxItem>
+                            </ItemsControl>
+                            <TextBlock Text="条件" FontWeight="Bold" Margin="{StaticResource ContentWithTitleSeparatorMargin}" />
+                            <ListView ItemContainerStyle="{DynamicResource ApproveListListViewItemContainerStyle}" x:Name="ApproveRuleList" Style="{DynamicResource ApproveRuleList}" ItemsSource="{Binding}" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+
+                <TabItem x:Name="ScheduleTab" Tag="実行オプション">
+                    <TabItem.Header>
+                        <PathGeometry>F1 M 12.0001,21.9167C 11.0863,21.9167 10.2068,21.7986 9.3615,21.5625C 8.51623,21.3264 7.72643,20.9923 6.99214,20.5602C 6.25782,20.1281 5.59022,19.6116 4.98933,19.0107C 4.38842,18.4098 3.87192,17.7422 3.43985,17.0079C 3.00776,16.2736 2.67366,15.4838 2.43755,14.6385C 2.20145,13.7933 2.08339,12.9137 2.08339,12C 2.08339,11.0839 2.20145,10.2038 2.43755,9.35968C 2.67366,8.51558 3.00776,7.72638 3.43985,6.99208C 3.87192,6.25777 4.38842,5.59017 4.98933,4.98926C 5.59022,4.38836 6.25782,3.87187 6.99214,3.43978C 7.72643,3.0077 8.51623,2.6736 9.3615,2.43749C 10.2068,2.20139 11.0863,2.08333 12.0001,2.08333C 12.9162,2.08333 13.7963,2.20139 14.6404,2.43749C 15.4845,2.6736 16.2737,3.0077 17.008,3.43978C 17.7423,3.87187 18.4099,4.38836 19.0108,4.98926C 19.6117,5.59017 20.1282,6.25777 20.5603,6.99208C 20.9923,7.72638 21.3264,8.51558 21.5626,9.35968C 21.7987,10.2038 21.9167,11.0839 21.9167,12C 21.9167,12.9137 21.7987,13.7933 21.5626,14.6385C 21.3264,15.4838 20.9923,16.2736 20.5603,17.0079C 20.1282,17.7422 19.6117,18.4098 19.0108,19.0107C 18.4099,19.6116 17.7423,20.1281 17.008,20.5602C 16.2737,20.9923 15.4845,21.3264 14.6404,21.5625C 13.7963,21.7986 12.9162,21.9167 12.0001,21.9167 Z M 12.0001,3.49999C 10.8266,3.49999 9.72513,3.72312 8.69567,4.16937C 7.66623,4.61562 6.76606,5.2242 5.99515,5.9951C 5.22425,6.766 4.61567,7.66617 4.16942,8.69562C 3.72318,9.72506 3.50005,10.8265 3.50005,12C 3.50005,13.1735 3.72318,14.2749 4.16942,15.3044C 4.61567,16.3338 5.22425,17.234 5.99515,18.0049C 6.76606,18.7758 7.66623,19.3844 8.69567,19.8306C 9.72513,20.2769 10.8266,20.5 12.0001,20.5C 13.1735,20.5 14.275,20.2769 15.3044,19.8306C 16.3339,19.3844 17.234,18.7758 18.005,18.0049C 18.7758,17.234 19.3844,16.3338 19.8307,15.3044C 20.2769,14.2749 20.5001,13.1735 20.5001,12C 20.5001,10.8265 20.2769,9.72506 19.8307,8.69562C 19.3844,7.66617 18.7758,6.766 18.005,5.9951C 17.234,5.2242 16.3339,4.61562 15.3044,4.16937C 14.275,3.72312 13.1735,3.49999 12.0001,3.49999 Z M 12.0001,12L 12.0001,6.33333L 10.5834,6.33333L 10.5834,13.4167L 16.2501,13.4167L 16.2501,12L 12.0001,12 Z</PathGeometry>
+                    </TabItem.Header>
+                    <ScrollViewer>
+                        <StackPanel Margin="{StaticResource TabControlMarginThickness}">
+                            <TextBlock Margin="{StaticResource ContentMargin}" FontSize="{DynamicResource TabControlHeaderFontSize}" Text="実行オプション" />
+
+                            <Expander x:Name="EditiingScheduleTriggersExpander" Style="{DynamicResource CheckedMinimumExpanderStyle}" Header="{}{0} という名前のタスクを登録します" d:IsExpanded="True">
+
+                                <ItemsControl ItemContainerStyle="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                    <ListBoxItem Tag="毎週" AutomationProperties.HelpText="" Margin="0">
+                                        <WrapPanel x:Name="WeeklyScheduleContainer">
+                                            <CheckBox x:Name="WeeklyScheduleSundayCheckBox" Content="日" IsChecked="{Binding Sunday, Mode=TwoWay}"/>
+                                            <CheckBox x:Name="WeeklyScheduleMondayCheckBox" Content="月" IsChecked="{Binding Monday, Mode=TwoWay}" />
+                                            <CheckBox x:Name="WeeklyScheduleTuesdayCheckBox" Content="火" IsChecked="{Binding Tuesday, Mode=TwoWay}" />
+                                            <CheckBox x:Name="WeeklyScheduleWednesdayCheckBox" Content="水" IsChecked="{Binding Wednesday, Mode=TwoWay}" />
+                                            <CheckBox x:Name="WeeklyScheduleThursdayCheckBox" Content="木" IsChecked="{Binding Thursday, Mode=TwoWay}" />
+                                            <CheckBox x:Name="WeeklyScheduleFridayCheckBox" Content="金" IsChecked="{Binding Friday, Mode=TwoWay}" />
+                                            <CheckBox x:Name="WeeklyScheduleSaturdayCheckBox" Content="土" IsChecked="{Binding Saturday, Mode=TwoWay}" />
+                                        </WrapPanel>
+                                    </ListBoxItem>
+                                    <ListBoxItem Tag="毎月" Visibility="Collapsed" Margin="0">
+                                        <CheckBox x:Name="MonthlyScheduleCheckBox" IsChecked="{Binding LoadedWeeksOfMonth, Mode=TwoWay}" HorizontalAlignment="Right"/>
+                                    </ListBoxItem>
+                                    <ListBoxItem Tag="実行する週" Margin="0">
+                                        <WrapPanel x:Name="MonthlyScheduleContainer">
+                                            <CheckBox x:Name="MonthlyScheduleFirstCheckBox" Content="第1週" IsChecked="{Binding First, Mode=TwoWay}" />
+                                            <CheckBox x:Name="MonthlyScheduleSecondCheckBox" Content="第2週" IsChecked="{Binding Second, Mode=TwoWay}" />
+                                            <CheckBox x:Name="MonthlyScheduleThirdCheckBox" Content="第3週" IsChecked="{Binding Third, Mode=TwoWay}" />
+                                            <CheckBox x:Name="MonthlyScheduleFourthCheckBox" Content="第4週" IsChecked="{Binding Fourth, Mode=TwoWay}" />
+                                            <CheckBox x:Name="MonthlyScheduleLastCheckBox" Content="最終週" IsChecked="{Binding Last, Mode=TwoWay}" />
+                                        </WrapPanel>
+                                    </ListBoxItem>
+                                    <ListBoxItem Tag="時刻" AutomationProperties.HelpText="" Margin="0">
+                                        <WindowsFormsHost HorizontalAlignment="Left" Width="100" Margin="10,0,0,0" >
+                                            <forms:DateTimePicker x:Name="WeeklyScheduleDateTimePicker" Format="Time" ShowUpDown="True" Value="2001/1/1 0:00:00"/>
+                                        </WindowsFormsHost>
+                                    </ListBoxItem>
+                                    <ListBoxItem Tag="このウィザードが完了した後、すぐに実行する" AutomationProperties.HelpText="">
+                                        <CheckBox x:Name="FistLaunchCheckBox" IsChecked="{Binding Enabled, Mode=TwoWay}" HorizontalAlignment="Right"/>
+                                    </ListBoxItem>
+                                </ItemsControl>
+                            </Expander>
+
+                            <StackPanel x:Name="ScheduleSqlContainer" Visibility="Collapsed" d:Visibility="Visible" Margin="{StaticResource FirstContentWithTitleSeparatorMargin}">
+                                <TextBlock Text="SQL 実行オプション" FontWeight="Bold" Margin="{StaticResource ContentWithTitleSeparatorMargin}" />
+                                <ItemsControl ItemContainerStyle="{DynamicResource VerticalListBoxItemContainerStyle}" >
+                                    <ListBoxItem Tag="データベースの統計情報の更新とインデックスの再構築" AutomationProperties.HelpText="統計情報の更新クエリとインデックスの再構築を実行します">
+                                        <CheckBox x:Name="UseSqlUpdateStatisticsAndDbccDbReIndexCheckBox" HorizontalAlignment="Right" IsChecked="{Binding CreateCustomIndexes, Mode=TwoWay}"/>
+                                    </ListBoxItem>
+                                    <ListBoxItem Tag="SUSDB のインデックス再構築を実行する" AutomationProperties.HelpText="クエリパフォーマンスを向上させます">
+                                        <CheckBox x:Name="UseSqlWsusDBMaintenanceCheckBox" HorizontalAlignment="Right" IsChecked="{Binding WsusDBMaintenance, Mode=TwoWay}"/>
+                                    </ListBoxItem>
+                                </ItemsControl>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+
+                <TabItem x:Name="AboutTab" Tag="バージョン情報">
+                    <TabItem.Header>
+                        <PathGeometry>F1 M 12.2917,22.9167C 11.3094,22.9167 10.3668,22.7909 9.46365,22.5395C 8.56052,22.288 7.71406,21.9321 6.92427,21.4717C 6.13448,21.0112 5.4167,20.4582 4.77094,19.8124C 4.12518,19.1666 3.57209,18.4489 3.11167,17.6591C 2.65125,16.8693 2.29531,16.0228 2.04386,15.1197C 1.7924,14.2166 1.66667,13.2739 1.66667,12.2917C 1.66667,11.3094 1.7924,10.3668 2.04386,9.46364C 2.29531,8.56052 2.65125,7.71406 3.11167,6.92427C 3.57209,6.13448 4.12518,5.4167 4.77094,4.77094C 5.4167,4.12517 6.13448,3.57149 6.92427,3.1099C 7.71406,2.6483 8.56052,2.29236 9.46365,2.04208C 10.3668,1.79181 11.3094,1.66667 12.2917,1.66667C 13.2739,1.66667 14.2166,1.79181 15.1197,2.04208C 16.0228,2.29236 16.8693,2.6483 17.6591,3.1099C 18.4489,3.57149 19.1666,4.12517 19.8124,4.77094C 20.4582,5.4167 21.0118,6.13448 21.4734,6.92427C 21.935,7.71406 22.291,8.56052 22.5413,9.46364C 22.7915,10.3668 22.9167,11.3094 22.9167,12.2917C 22.9167,13.2739 22.7915,14.2166 22.5413,15.1197C 22.291,16.0228 21.935,16.8693 21.4734,17.6591C 21.0118,18.4489 20.4582,19.1666 19.8124,19.8124C 19.1666,20.4582 18.4489,21.0112 17.6591,21.4717C 16.8693,21.9321 16.0228,22.288 15.1197,22.5395C 14.2166,22.7909 13.2739,22.9167 12.2917,22.9167 Z M 12.2917,3.08333C 11.444,3.08333 10.6289,3.19371 9.84615,3.41448C 9.06344,3.63524 8.3309,3.94514 7.64854,4.34417C 6.96618,4.74319 6.34462,5.22309 5.78386,5.78385C 5.22309,6.34462 4.74379,6.96618 4.34594,7.64854C 3.94809,8.3309 3.6382,9.06521 3.41625,9.85146C 3.19431,10.6377 3.08334,11.4511 3.08334,12.2917C 3.08334,13.1322 3.19431,13.9456 3.41625,14.7319C 3.6382,15.5181 3.94809,16.2524 4.34594,16.9348C 4.74379,17.6172 5.22309,18.2387 5.78386,18.7995C 6.34462,19.3602 6.96618,19.8395 7.64854,20.2374C 8.3309,20.6352 9.06344,20.9451 9.84615,21.1671C 10.6289,21.389 11.444,21.5 12.2917,21.5C 13.1322,21.5 13.9456,21.389 14.7319,21.1671C 15.5181,20.9451 16.2524,20.6352 16.9348,20.2374C 17.6172,19.8395 18.2387,19.3602 18.7995,18.7995C 19.3602,18.2387 19.8401,17.6172 20.2392,16.9348C 20.6382,16.2524 20.9481,15.5199 21.1689,14.7372C 21.3896,13.9545 21.5,13.1393 21.5,12.2917C 21.5,11.4511 21.3896,10.6377 21.1689,9.85146C 20.9481,9.06521 20.6382,8.3309 20.2392,7.64854C 19.8401,6.96618 19.3602,6.34462 18.7995,5.78385C 18.2387,5.22309 17.6172,4.74319 16.9348,4.34417C 16.2524,3.94514 15.5181,3.63524 14.7319,3.41448C 13.9456,3.19371 13.1322,3.08333 12.2917,3.08333 Z M 11.5833,10.1667L 13,10.1667L 13,17.25L 11.5833,17.25L 11.5833,10.1667 Z M 11.5833,7.33333L 13,7.33333L 13,8.75L 11.5833,8.75L 11.5833,7.33333 Z</PathGeometry>
+                    </TabItem.Header>
+                    <ScrollViewer>
+                        <StackPanel Margin="{StaticResource TabControlMarginThickness}">
+                            <TextBlock Margin="{StaticResource ContentMargin}" FontSize="{DynamicResource TabControlHeaderFontSize}"><Run Text="バージョン情報"/></TextBlock>
+
+                            <TextBlock x:Name="ApplicationTitleTextBlock" FontWeight="Bold" Margin="{StaticResource ContentMargin}" Text="Wsustainable" />
+                            <TextBlock><Run Text="バージョン: "/><Run x:Name="ApplicationLastUpdatedTextBlock" Text="" /></TextBlock>
+                            <TextBlock Margin="{StaticResource ContentSeparatorMargin}"><Run Text="© "/><Run x:Name="AuthorTextBlock" Text="" /></TextBlock>
+
+                            <TextBlock Text="公開" FontWeight="Bold" Margin="{StaticResource ContentMargin}" />
+                            <TextBlock><Hyperlink x:Name="AboutGitHubHyperlink" NavigateUri="https://github.com/rin309/Wsustainable/wiki"><Run Text="Wiki"/></Hyperlink></TextBlock>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+            </TabControl>
+
+            <Grid x:Name="NavigationBar" Grid.Row="1" Background="White" Visibility="Collapsed" d:Visibility="Visible">
+                <WrapPanel Margin="10" HorizontalAlignment="Right">
+                    <Button x:Name="NavigationBarBackButton" Content="戻る" Visibility="Collapsed" d:Visibility="Visible"/>
+                    <Button x:Name="NavigationBarInstallButton" Content="インストール" Style="{DynamicResource ActiveButtonStyle}" Visibility="Collapsed" d:Visibility="Visible"/>
+                    <Button x:Name="NavigationBarFowardButton" Content="次へ" Style="{DynamicResource ActiveButtonStyle}" Visibility="Collapsed" d:Visibility="Visible"/>
+                    <Button x:Name="NavigationBarCompleteButton" Content="完了" Style="{DynamicResource ActiveButtonStyle}" Visibility="Collapsed" d:Visibility="Visible"/>
+                    <Button x:Name="NavigationBarCancelButton" Content="キャンセル" Visibility="Collapsed" d:Visibility="Visible"/>
+                </WrapPanel>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="IndicatorRoot" Visibility="Hidden" Background="{StaticResource ContentDialogDarkModeScreenBrush}" >
+            <Border MaxWidth="600" VerticalAlignment="Center" Background="{DynamicResource ContentDialogDarkModeBackgroundBrush}" BorderBrush="{StaticResource ContentDialogDarkModeBorderBrush}" BorderThickness="1" CornerRadius="{StaticResource CornerRadius}">
+                <Grid MaxWidth="500" Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid SnapsToDevicePixels="true" Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Grid.Column="0" Margin="-120,0,0,0">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Ellipse x:Name="Indicator1" Width="{Binding Width, ElementName=IndicatorRoot}" Height="{Binding Height, ElementName=IndicatorRoot}" Fill="White" RenderTransformOrigin="0.5,-3.5" Opacity="0">
+                                <Ellipse.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="0.1" ScaleX="0.1"/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-180"/>
+                                        <TranslateTransform Y="122.5"/>
+                                    </TransformGroup>
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                            <Ellipse x:Name="Indicator2" Width="{Binding Width, ElementName=IndicatorRoot}" Height="{Binding Height, ElementName=IndicatorRoot}" Fill="White" RenderTransformOrigin="0.5,-3.5" Opacity="0">
+                                <Ellipse.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="0.1" ScaleX="0.1"/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-180"/>
+                                        <TranslateTransform Y="122.5"/>
+                                    </TransformGroup>
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                            <Ellipse x:Name="Indicator3" Width="{Binding Width, ElementName=IndicatorRoot}" Height="{Binding Height, ElementName=IndicatorRoot}" Fill="White" RenderTransformOrigin="0.5,-3.5" Opacity="0">
+                                <Ellipse.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="0.1" ScaleX="0.1"/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-180"/>
+                                        <TranslateTransform Y="122.5"/>
+                                    </TransformGroup>
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                            <Ellipse x:Name="Indicator4" Width="{Binding Width, ElementName=IndicatorRoot}" Height="{Binding Height, ElementName=IndicatorRoot}" Fill="White" RenderTransformOrigin="0.5,-3.5" Opacity="0">
+                                <Ellipse.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="0.1" ScaleX="0.1"/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-180"/>
+                                        <TranslateTransform Y="122.5"/>
+                                    </TransformGroup>
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                            <Ellipse x:Name="Indicator5" Width="{Binding Width, ElementName=IndicatorRoot}" Height="{Binding Height, ElementName=IndicatorRoot}" Fill="White" RenderTransformOrigin="0.5,-3.5" Opacity="0">
+                                <Ellipse.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="0.1" ScaleX="0.1"/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-180"/>
+                                        <TranslateTransform Y="122.5"/>
+                                    </TransformGroup>
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                        </Grid>
+                        <TextBlock x:Name="StatusTitle" Foreground="White" FontSize="22" Grid.Column="1" VerticalAlignment="Center" Text="確認が終わるまでしばらくお待ちください" />
+                    </Grid>
+                    <ListBox x:Name="StatusList" ItemsSource="{Binding}" Grid.Row="1" MinHeight="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" ItemTemplate="{DynamicResource ProgressStatusDataTemplate}" />
+
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Grid x:Name="EulaRoot" Visibility="Collapsed" Background="{StaticResource ContentDialogDarkModeScreenBrush}">
+            <Grid x:Name="EulaRowsContainer" MaxWidth="500" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Border Background="{DynamicResource ContentDialogDarkModeBackgroundBrush}" Padding="20" CornerRadius="4,4,0,0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Wsustainable (PREVIEW)" Foreground="White" FontSize="22" Margin="{StaticResource ContentMargin}" />
+                        <TextBlock  Foreground="White" Text="作者はいかなる責任も負いませんので、運用担当者の責任の下使用してください。"/>
+                        <TextBlock  Foreground="White" Text="必ずテスト環境で正常に動作することを確認し、運用開始後も正常に使用できているか定期的に確認してください。"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="{DynamicResource ContentDialogButtonContainerDarkModeBackgroundBrush}" Padding="20" CornerRadius="0,0,4,4" Grid.Row="1">
+                    <StackPanel Orientation="Vertical">
+                        <CheckBox x:Name="DontShowMeCheckBox" Visibility="Collapsed" Foreground="White" Margin="5,0,0,10" Content="今後、このメッセージを表示しない" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button x:Name="AgreeButton" HorizontalAlignment="Center" Style="{DynamicResource ActiveButtonStyle}" Content="上記の内容に同意します" />
+                            <Button x:Name="ExitButton" Content="内容に同意できませんので画面を閉じます" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Border VerticalAlignment="Center" BorderBrush="{StaticResource ContentDialogDarkModeBorderBrush}" BorderThickness="1" CornerRadius="{StaticResource CornerRadius}" Height="{Binding ActualHeight, ElementName=EulaRowsContainer}" Width="{Binding ActualWidth, ElementName=EulaRowsContainer}" />
+        </Grid>
+
+    </Grid>
+</Window>

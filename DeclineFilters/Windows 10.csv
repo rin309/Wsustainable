@@ -1,0 +1,66 @@
+﻿Filter,RegexMode,Product,Version,Type,Architecture,TargetProductId,TargetClassifications
+Windows 10 Version 1507 for x64,,Windows 10,1507,Updates,x64,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 1507 for x86,,Windows 10,1507,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 1511 for x64,,Windows 10,1511,Updates,x64,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 1511 for x86,,Windows 10,1511,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 1511 (,,Windows 10,1511,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 1607 for x64,,Windows 10,1607,Updates,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1607 for AMD64,,Windows 10,1607,Updates,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1607 for x86,,Windows 10,1607,Updates,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1607 (,,Windows 10,1607,Updates,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1703 for x64,,Windows 10,1703,Updates,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1703 for x86,,Windows 10,1703,Updates,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1703 (,,Windows 10,1703,Updates,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1709 for x64,,Windows 10,1709,Updates,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1709 for x86,,Windows 10,1709,Updates,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1709 (,,Windows 10,1709,Updates,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1709 for ARM64,,Windows 10,1709,Updates,arm64,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1803 for x64,,Windows 10,1803,Updates,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1803 for x86,,Windows 10,1803,Updates,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1803 (,,Windows 10,1803,Updates,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1803 for ARM64,,Windows 10,1803,Updates,arm64,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows 10 Version 1809 for x64,,Windows 10,1809,Updates,x64,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 1809 for x86,,Windows 10,1809,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 1809 (,,Windows 10,1809,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 1809 for ARM64,,Windows 10,1809,Updates,arm64,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 1903 for x64,,Windows 10,19H1,Updates,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 1903 for x86,,Windows 10,19H1,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 1903 (,,Windows 10,19H1,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 1903 for ARM64,,Windows 10,19H1,Updates,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 1909 for x64,,Windows 10,19H2,Updates,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 1909 for x86,,Windows 10,19H2,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 1909 (,,Windows 10,19H2,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 1909 for ARM64,,Windows 10,19H2,Updates,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 2004 for x64,,Windows 10,20H2,Updates,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 2004 for x86,,Windows 10,20H2,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 2004 (,,Windows 10,20H2,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 2004 for ARM64,,Windows 10,20H2,Updates,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 20H2 for x64,,Windows 10,20H2,Updates,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 20H2 for x86,,Windows 10,20H2,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 20H2 (,,Windows 10,20H2,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 20H2 for ARM64,,Windows 10,20H2,Updates,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+"Windows 10, Version 20H2 for x64",,Windows 10,20H2,Updates,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+"Windows 10, Version 20H2 for x86",,Windows 10,20H2,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+"Windows 10, Version 20H2 (",,Windows 10,20H2,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+"Windows 10, Version 20H2 for ARM64",,Windows 10,20H2,Updates,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 21H2 for x64,,Windows 10,21H2,Updates,x64,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 21H2 for x86,,Windows 10,21H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 21H2 (,,Windows 10,21H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 21H2 for ARM64,,Windows 10,21H2,Updates,arm64,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+d2085b71-5f1f-43a9-880d-ed159016d5c6",
+Windows 10 Version 22H2 for x64,,Windows 10,22H2,Updates,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 22H2 for x86,,Windows 10,22H2,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 22H2 (,,Windows 10,22H2,Updates,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,
+Windows 10 Version 22H2 for ARM64,,Windows 10,22H2,Updates,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,
