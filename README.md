@@ -2,7 +2,6 @@
 `現在プレビュー版として公開しているため、全機能は実装されていません。また、仕様を大きく変更する可能性があるため、本番環境に組み込まないでください。`
 このツールは、選択したサーバー上に既に構成されている WSUS (Windows Server Update Services サービス) における更新プログラムの拒否を自動化するためのツールです。
 
-
 # 事前に必要な作業
 事前に WSUS をインストール、構成してください。(https://jpmem.github.io/blog/wsus/2023-02-16_01/)
 
@@ -12,16 +11,14 @@
 - 同期スケジュール: 自動
 - 自動承認: 必要に応じて構成してください (自動承認を有効にすると、スクリプト動作までの間にタイムラグが発生します)
 
-
-# 使い方
-https://github.com/rin309/Wsustainable/wiki/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/ を参照してください。
-
+# インストールと使い方
+- https://github.com/rin309/Wsustainable/wiki/Install
+- https://github.com/rin309/Wsustainable/wiki/HowToUse
 
 # ログの確認
 下記フォルダーに保存されます。
 既定で10回分の動作ログが保存されます。
 C:\ProgramData\Wsustainable\0.1\Logs\
-
 
 # 実行アカウント
 ログインしていない状態でも実行させるために SYSTEM ユーザーを指定していますが、下記の理由で変更されたい場合もあると思われます。
