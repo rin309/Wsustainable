@@ -438,14 +438,13 @@ Function Global:Initialize-SyncWindowsProductsTab{
     $MainWindow.FindName("SyncWindows11Container").DataContext = $CurrentConfig.ChooseProducts."Windows 11"
     $MainWindow.FindName("SyncWindows11LanguagesEditButton").Add_Click({param($sender,$e)
         Try{
-            $MainWindow.Dispatcher.Invoke({
-                Get-SelectLanguagesWindow
-                $SelectLanguagesWindow.FindName("LanguagesList").DataContext = $Windows11FeatureUpdateLanguages
-                If ($SelectLanguagesWindow.ShowDialog()){
-                    $CurrentConfig.ChooseProducts."Windows 11".ExcludeLanguages = (($Windows11FeatureUpdateLanguages | Where-Object Selected).CultureInfo.Name -join ",")
-                    $SelectLanguagesWindow.FindName("SyncWindows11Container").DataContext = $CurrentConfig.ChooseProducts."Windows 11"
-                }
-            })
+            Get-SelectLanguagesWindow
+            $Windows11FeatureUpdateLanguages | ForEach-Object{ $_.Visible = $True }
+            $Global:SelectLanguagesWindow.FindName("LanguagesList").DataContext = $Windows11FeatureUpdateLanguages
+            If ($Global:SelectLanguagesWindow.ShowDialog()){
+                $Global:CurrentConfig.ChooseProducts."Windows 11".ExcludeLanguages = (($Windows11FeatureUpdateLanguages | Where-Object Selected).CultureInfo.Name -join ",")
+                $MainWindow.FindName("SyncWindows11Container").DataContext = $CurrentConfig.ChooseProducts."Windows 11"
+            }
         }
         Catch{}
     })
@@ -454,14 +453,14 @@ Function Global:Initialize-SyncWindowsProductsTab{
     $MainWindow.FindName("SyncWindows10Container").DataContext = $CurrentConfig.ChooseProducts."Windows 10"
     $MainWindow.FindName("SyncWindows10LanguagesEditButton").Add_Click({param($sender,$e)
         Try{
-            $MainWindow.Dispatcher.Invoke({
-                Get-SelectLanguagesWindow
-                $SelectLanguagesWindow.FindName("LanguagesList").DataContext = $Windows10FeatureUpdateLanguages
-                If ($SelectLanguagesWindow.ShowDialog()){
-                    $CurrentConfig.ChooseProducts."Windows 10".ExcludeLanguages = (($Windows10FeatureUpdateLanguages | Where-Object Selected).CultureInfo.Name -join ",")
-                    $SelectLanguagesWindow.FindName("SyncWindows10LanguagesLabel").DataContext = $CurrentConfig.ChooseProducts."Windows 10".ExcludeLanguages
-                }
-            })
+            Get-SelectLanguagesWindow
+            $Global:SelectLanguagesWindow.FindName("LanguagesList").DataContext = $Null
+            $Windows10FeatureUpdateLanguages | ForEach-Object{ $_.Visible = $True }
+            $Global:SelectLanguagesWindow.FindName("LanguagesList").DataContext = $Windows10FeatureUpdateLanguages
+            If ($Global:SelectLanguagesWindow.ShowDialog()){
+                $Global:CurrentConfig.ChooseProducts."Windows 10".ExcludeLanguages = (($Windows10FeatureUpdateLanguages | Where-Object Selected).CultureInfo.Name -join ",")
+                $MainWindow.FindName("SyncWindows10Container").DataContext = $CurrentConfig.ChooseProducts."Windows 10"
+            }
         }
         Catch{}
     })

@@ -270,11 +270,11 @@
                                         </ListBoxItem>
                                         <ListBoxItem Tag="チャネル" Margin="0">
                                             <WrapPanel MaxWidth="300">
-                                                <CheckBox x:Name="SyncEdgeBetaCheckBox" Content="Beta" Style="{DynamicResource UnCheckBoxStyle}" IsChecked="{Binding Beta, Mode=TwoWay}"/>
-                                                <CheckBox x:Name="SyncEdgeDevCheckBox" Content="Dev" Style="{DynamicResource UnCheckBoxStyle}" IsChecked="{Binding Dev, Mode=TwoWay}"/>
-                                                <CheckBox x:Name="SyncEdgeStableCheckBox" Content="Stable" Style="{DynamicResource UnCheckBoxStyle}" IsChecked="{Binding Stable, Mode=TwoWay}"/>
-                                                <CheckBox x:Name="SyncEdgeExtendStableCheckBox" Content="Extended Stable" Style="{DynamicResource UnCheckBoxStyle}" IsChecked="{Binding ExtendedStable, Mode=TwoWay}"/>
-                                                <CheckBox x:Name="SyncEdgeWebView2RuntimeCheckBox" Content="WebView2 Runtime" Style="{DynamicResource UnCheckBoxStyle}" IsChecked="{Binding WebView2Runtime, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncEdgeBetaCheckBox" Content="Beta" IsChecked="{Binding Beta, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncEdgeDevCheckBox" Content="Dev" IsChecked="{Binding Dev, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncEdgeStableCheckBox" Content="Stable" IsChecked="{Binding Stable, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncEdgeExtendStableCheckBox" Content="Extended Stable" IsChecked="{Binding ExtendedStable, Mode=TwoWay}"/>
+                                                <CheckBox x:Name="SyncEdgeWebView2RuntimeCheckBox" Content="WebView2 Runtime" IsChecked="{Binding WebView2Runtime, Mode=TwoWay}"/>
                                             </WrapPanel>
                                         </ListBoxItem>
                                         <ListBoxItem Tag="最新版のみを使用する" AutomationProperties.HelpText="旧バージョンを拒否します" Style="{DynamicResource VerticalListBoxItemContainerStyle}" Margin="0">
