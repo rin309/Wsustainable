@@ -15,18 +15,7 @@
 - https://github.com/rin309/Wsustainable/wiki/Install
 - https://github.com/rin309/Wsustainable/wiki/HowToUse
 
-# ログの確認
-下記フォルダーに保存されます。
-既定で10回分の動作ログが保存されます。
-C:\ProgramData\Wsustainable\0.1\Logs\
-
-# 実行アカウント
-ログインしていない状態でも実行させるために SYSTEM ユーザーを指定していますが、下記の理由で変更されたい場合もあると思われます。
-  
-- 動作しないため、エラー画面を表示させたい
-- プロキシなどのネットワーク環境要因によって、ユーザーを指定したい
-- 動作する権限を最小限にするため、ユーザーを指定したい
-  
-このスクリプトでは、実行権限・フォルダーやネットワークへのアクセス権限に問題が無ければ実行できると考えております。  
-必要に応じて、ユーザーの変更はタスクスケジューラーから行ってください。  
-![Optimize-WsusContents のプロパティ (ローカル コンピューター)](https://user-images.githubusercontent.com/760251/230722128-428d6ed1-ae26-48ee-8892-dc52784ae8ee.png)
+# 想定している動作環境 (テストをした環境ではありません。自己責任にてお願いします。)
+- Windows Server 2019
+- Windows Server 2022
+- Windows Server 2025
