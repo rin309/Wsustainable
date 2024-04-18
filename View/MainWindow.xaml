@@ -236,7 +236,7 @@
                                     </StackPanel>
                                 </Expander>
                             </Grid>
-                            <Grid x:Name="SyncWindows10Container" d:Visibility="Visible" Visibility="Collapsed">
+                            <Grid x:Name="SyncWindows10Container" d:Visibility="Visible">
                                 <Expander x:Name="SyncWindows10Expander" Style="{DynamicResource CheckedExpanderStyle}" Header="Windows 10 を構成する" AutomationProperties.HelpText="提供終了日: 2025/10/13" d:IsExpanded="True" IsExpanded="{Binding Configure, Mode=TwoWay}">
                                     <StackPanel>
                                         <ItemsControl x:Name="SyncWindowsProductsWindows10Lists" ItemTemplate="{DynamicResource SyncWindowFeatureUpdateChooser}" ItemsSource="{Binding}" />
@@ -319,7 +319,7 @@
                                     </ItemsControl>
                                 </Expander>
                             </Grid>
-                            <Grid x:Name="SyncVisualStudioContainer" d:Visibility="Visible" Visibility="Collapsed">
+                            <Grid x:Name="SyncVisualStudioContainer" d:Visibility="Visible">
                                 <Expander x:Name="SyncVisualStudioExpander" Style="{DynamicResource CheckedMinimumExpanderStyle}" Header="Visual Studio を構成する" AutomationProperties.HelpText="" d:IsExpanded="True" IsExpanded="{Binding Configure, Mode=TwoWay}">
                                     <ItemsControl x:Name="SyncVisualStudioLists" ItemTemplate="{DynamicResource SyncVisualStudioUpdateChooser}" ItemsSource="{Binding}" />
                                 </Expander>

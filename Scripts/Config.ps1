@@ -79,14 +79,75 @@ Function Global:Get-DeclineRules($Config){
         } | ForEach-Object {
             $DeclineRules += $_
         }
-
     }
 
     #
     # Windows 10
     #
     If ($Config.ChooseProducts.'Windows 10'.Configure){
-        #
+        ## Filter table
+        $Filter = $Null
+        #$Filter = Import-Csv "..\Wsustainable\DeclineFilters\Windows 10.csv" -Encoding UTF8
+        $Filter = Import-Csv (Join-Path (Get-Module Wsustainable).ModuleBase "\DeclineFilters\Windows 10.csv") -Encoding UTF8
+
+        ## Quality Updates
+        $Config.ChooseVersions.'Windows 10' | ForEach-Object {
+            $ChooseVersion = $_
+            $Filter | Where-Object { 
+                $_.Version -eq $ChooseVersion.Version -and # version
+                (-not $ChooseVersion.($_.Architecture)) -and ($True -in $Config.ChooseVersions.'Windows 10'.($_.Architecture)) -and # architecture
+                $_.Type -ne "All" -and # type
+                ($_.RegexMode -ne "Windows 10 FU Exclude Languages") # filtertype
+            } | ForEach-Object {
+                $DeclineRules += $_
+            }
+        }
+        ## Volume
+        If (-not $Config.ChooseProducts.'Windows 10'.BusinessUpgrade){
+            $Config.ChooseVersions.'Windows 10' | ForEach-Object {
+                $ChooseVersion = $_
+                $Filter | Where-Object {
+                    $_.Type -eq "BusinessUpgrade" -and ($True -in $Config.ChooseVersions.'Windows 10'.($_.Architecture)) -and # architecture
+                    ($_.RegexMode -ne "Windows 10 FU Exclude Languages") # filtertype
+                } | ForEach-Object {
+                    $DeclineRules += $_
+                }
+            }
+        }
+        ## Retail
+        If (-not $Config.ChooseProducts.'Windows 10'.ConsumerUpgrade){
+            $Config.ChooseVersions.'Windows 10' | ForEach-Object {
+                $ChooseVersion = $_
+                $Filter | Where-Object {
+                    $_.Type -eq "ConsumerUpgrade" -and # type
+                    ($_.RegexMode -ne "Windows 10 FU Exclude Languages") # filtertype
+                } | ForEach-Object {
+                    $DeclineRules += $_
+                }
+            }
+        }
+        ## Upgrades
+        If ($Config.ChooseProducts.'Windows 10'.ExcludeLanguages -ne $Null){
+            $Config.ChooseVersions.'Windows 10' | ForEach-Object {
+                $ChooseVersion = $_
+                $Filter | Where-Object {
+                    $_.Version -eq $ChooseVersion.Version -and # version
+                    ($ChooseVersion.($_.Architecture)) -and ($True -in $Config.ChooseVersions.'Windows 10'.($_.Architecture)) -and # architecture
+                    ($_.Type -eq "BusinessUpgrade" -or $_.Type -eq "ConsumerUpgrade") -and # type
+                    $_.RegexMode -eq "Windows 10 FU Exclude Languages" # filtertype
+                } | ForEach-Object {
+                    $DeclineRules += $_
+                }
+            }
+        }
+        # All
+        $Filter | Where-Object { 
+            ($True -notin $Config.ChooseVersions.'Windows 10'.($_.Architecture)) -and # architecture
+            $_.Type -eq "All" -and # type
+            ($_.RegexMode -ne "Windows 10 FU Exclude Languages") # filtertype
+        } | ForEach-Object {
+            $DeclineRules += $_
+        }
     }
 
 
@@ -101,40 +162,33 @@ Function Global:Get-DeclineRules($Config){
         $Filter = Import-Csv (Join-Path (Get-Module Wsustainable).ModuleBase "\DeclineFilters\Microsoft Edge.csv") -Encoding UTF8
 
         ## decline channel
-        $Config.ChooseVersions.'Microsoft Edge' | ForEach-Object {
-            $ChooseVersion = $_
-            $Filter | Where-Object { 
-                    ($_.Architecture -eq "all") -and # architecture
-                    (-not $Config.ChooseProducts.'Microsoft Edge'.($_.Type)) -and # type
-                    (-not $_.RegexMode) # filtertype
-                } | ForEach-Object {
-                    $DeclineRules += $_
-                }
-        }
+        $Filter | Where-Object { 
+                ($_.Architecture -eq "all") -and # architecture
+                (-not $Config.ChooseProducts.'Microsoft Edge'.($_.Type)) -and # type
+                ($_.RegexMode -ne "Decline Old Version") # filtertype
+            } | ForEach-Object {
+                $DeclineRules += $_
+            }
+
         ## decline architecture
-        $Config.ChooseVersions.'Microsoft Edge' | ForEach-Object {
-            $ChooseVersion = $_
-            $Filter | Where-Object {
-                    ($_.Architecture -ne "all") -and # exclude first choice
-                    (-not $Config.ChooseProducts.'Microsoft Edge'.($_.Architecture)) -and # architecture
-                    $Config.ChooseProducts.'Microsoft Edge'.($_.Type) -and # type
-                    (-not $_.RegexMode) # filtertype
-                } | ForEach-Object {
-                    $DeclineRules += $_
-                }
-        }
+        $Filter | Where-Object {
+                ($_.Architecture -ne "all") -and # exclude first choice
+                (-not $Config.ChooseProducts.'Microsoft Edge'.($_.Architecture)) -and # architecture
+                $Config.ChooseProducts.'Microsoft Edge'.($_.Type) -and # type
+                ($_.RegexMode -ne "Decline Old Version") # filtertype
+            } | ForEach-Object {
+                $DeclineRules += $_
+            }
+
         ## decline old version
         If ($Config.ChooseProducts.'Microsoft Edge'.DeclineOldVersion){
-            $Config.ChooseVersions.'Microsoft Edge' | ForEach-Object {
-                $ChooseVersion = $_
-                $Filter | Where-Object { 
-                    ($_.Architecture -ne "all") -and # exclude first choice
-                    ($Config.ChooseProducts.'Microsoft Edge'.($_.Architecture)) -and # architecture
-                    $Config.ChooseProducts.'Microsoft Edge'.($_.Type) -and # type
-                    $_.RegexMode # filtertype
-                } | ForEach-Object {
-                    $DeclineRules += $_
-                }
+            $Filter | Where-Object { 
+                ($_.Architecture -ne "all") -and # exclude first choice
+                ($Config.ChooseProducts.'Microsoft Edge'.($_.Architecture)) -and # architecture
+                $Config.ChooseProducts.'Microsoft Edge'.($_.Type) -and # type
+                $_.RegexMode -eq "Decline Old Version" # filtertype
+            } | ForEach-Object {
+                $DeclineRules += $_
             }
         }
     }
@@ -150,26 +204,20 @@ Function Global:Get-DeclineRules($Config){
         $Filter = Import-Csv (Join-Path (Get-Module Wsustainable).ModuleBase "\DeclineFilters\Malicious Software Removal Tool.csv") -Encoding UTF8
 
         ## decline architecture
-        $Config.ChooseVersions.'Malicious Software Removal Tool' | ForEach-Object {
-            $ChooseVersion = $_
-            $Filter | Where-Object {
-                    (-not $Config.ChooseProducts.'Malicious Software Removal Tool'.($_.Architecture)) -and # architecture
-                    (-not $_.RegexMode) # filtertype
-                } | ForEach-Object {
-                    $DeclineRules += $_
-                }
-        }
+        $Filter | Where-Object {
+                (-not $Config.ChooseProducts.'Malicious Software Removal Tool'.($_.Architecture)) -and # architecture
+                (-not $_.RegexMode) # filtertype
+            } | ForEach-Object {
+                $DeclineRules += $_
+            }
+
         ## decline old version
         If ($Config.ChooseProducts.'Malicious Software Removal Tool'.DeclineOldVersion){
-            $Config.ChooseVersions.'Malicious Software Removal Tool' | ForEach-Object {
-                $ChooseVersion = $_
-                $Filter | Where-Object { 
-                    ($Config.ChooseProducts.'Malicious Software Removal Tool'.($_.Architecture)) -and # architecture
-                    $Config.ChooseProducts.'Malicious Software Removal Tool'.($_.Type) -and # type
-                    $_.RegexMode # filtertype
-                } | ForEach-Object {
-                    $DeclineRules += $_
-                }
+            $Filter | Where-Object { 
+                $Config.ChooseProducts.'Malicious Software Removal Tool'.($_.Architecture) -and # architecture
+                $_.RegexMode # filtertype
+            } | ForEach-Object {
+                $DeclineRules += $_
             }
         }
     }
@@ -202,14 +250,11 @@ Function Global:Get-DeclineRules($Config){
         $Filter = Import-Csv (Join-Path (Get-Module Wsustainable).ModuleBase "\DeclineFilters\Office.csv") -Encoding UTF8
 
         ## decline architecture
-        $Config.ChooseVersions.'Office' | ForEach-Object {
-            $ChooseVersion = $_
-            $Filter | Where-Object {
-                    (-not $Config.ChooseProducts.'Office'.($_.Architecture)) # architecture
-                } | ForEach-Object {
-                    $DeclineRules += $_
-                }
-        }
+        $Filter | Where-Object {
+                (-not $Config.ChooseProducts.'Office'.($_.Architecture)) # architecture
+            } | ForEach-Object {
+                $DeclineRules += $_
+            }
     }
 
 
@@ -217,16 +262,29 @@ Function Global:Get-DeclineRules($Config){
     # Visual Studio
     #
     If ($Config.ChooseProducts.'Visual Studio'.Configure){
-        #
+        ## Filter table
+        $Filter = $Null
+        #$Filter = Import-Csv "..\Wsustainable\DeclineFilters\Visual Studio.csv" -Encoding UTF8
+        $Filter = Import-Csv (Join-Path (Get-Module Wsustainable).ModuleBase "\DeclineFilters\Visual Studio.csv") -Encoding UTF8
+
+        ## Quality Updates
+        $Config.ChooseVersions.'Visual Studio' | ForEach-Object {
+            $ChooseVersion = $_
+            $Filter | Where-Object { 
+                $_.Version -eq $ChooseVersion.Version
+            } | ForEach-Object {
+                $DeclineRules += $_
+            }
+        }
     }
 
 
     #
     # TEMPLATE
     #
-    If ($Config.ChooseProducts.'TEMPLATE'.Configure){
+    #If ($Config.ChooseProducts.'TEMPLATE'.Configure){
         #
-    }
+    #}
 
 
     $CurrentConfig.DeclineRules = ($DeclineRules | Sort-Object Product, Version, Architecture, Type) #-Unique)

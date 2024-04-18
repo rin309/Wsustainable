@@ -62,7 +62,7 @@
         $Global:CurrentConfig.ChooseVersions."Windows 10" = $Windows10Products | Sort-Object Version -Unique | Select-Object Version, @{Name="arm64";Expression={$_.SelectedArm64}}, @{Name="x64";Expression={$_.SelectedX64}}, @{Name="x86";Expression={$_.SelectedX86}}
     }
     If ($Global:CurrentConfig.ChooseProducts."Visual Studio".Configure){
-        $Global:CurrentConfig.ChooseVersions."Visual Studio" = $VisualStudioProducts | Sort-Object Version -Unique | Select-Object Version
+        $Global:CurrentConfig.ChooseVersions."Visual Studio" = $VisualStudioProducts | Where-Object Selected | Sort-Object Version -Unique | Select-Object Version
     }
     #$Global:CurrentConfig.ChooseProducts."Microsoft Edge".x86 = $MainWindow.FindName("SynWindowsChooseMsEdgeX86CheckBox").IsChecked
     #$Global:CurrentConfig.ChooseProducts."Microsoft Edge".x64 = $MainWindow.FindName("SynWindowsChooseMsEdgeX64CheckBox").IsChecked

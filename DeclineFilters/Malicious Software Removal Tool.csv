@@ -1,3 +1,5 @@
 ﻿Filter,RegexMode,Product,Version,Type,Architecture,TargetProductId,TargetClassifications
-Windows Malicious Software Removal Tool x64 -,,Malicious Software Removal Tool,,,x64,6964aab4-c5b5-43bd-a17d-ffb4346a8e1d,
-Windows Malicious Software Removal Tool -,,Malicious Software Removal Tool,,,x86,6964aab4-c5b5-43bd-a17d-ffb4346a8e1d,
+Windows Malicious Software Removal Tool x64 -,,Malicious Software Removal Tool,,,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,
+Windows Malicious Software Removal Tool -,,Malicious Software Removal Tool,,,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,
+.+(x64 - v)(?<Version>.+) \(,Decline Old Version,Malicious Software Removal Tool,,,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,
+.+( - v)(?<Version>.+) \(,Decline Old Version,Malicious Software Removal Tool,,,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,

@@ -24,7 +24,7 @@
                         <Run Text="{Binding EndDate}" />
                     </TextBlock>
                 </StackPanel>
-                <CheckBox Grid.Column="1" HorizontalAlignment="Right" IsChecked="{Binding DeclineOldVersions, Mode=TwoWay}" IsEnabled="{Binding Enabled}" />
+                <CheckBox Grid.Column="1" HorizontalAlignment="Right" IsChecked="{Binding Selected, Mode=TwoWay}" IsEnabled="{Binding Enabled}" />
             </Grid>
         </Border>
     </DataTemplate>
