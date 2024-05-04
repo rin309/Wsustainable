@@ -1,4 +1,4 @@
-﻿Filter,RegexMode,Product,Version,Type,Architecture,TargetProductId,TargetClassifications
+﻿Filter,Mode,Product,Version,Type,Architecture,TargetProductId,TargetClassifications
 arm64,,Windows 10,,All,arm64,"a3c2375d-0c8a-42f9-bce0-28333e198407
 b3c75dc1-155f-4be4-b015-3f1a91758e52
 d2085b71-5f1f-43a9-880d-ed159016d5c6
@@ -14,48 +14,21 @@ b3c75dc1-155f-4be4-b015-3f1a91758e52
 d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1511 (,,Windows 10,,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
-d2085b71-5f1f-43a9-880d-ed159016d5c6
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1607 (,,Windows 10,,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1703 (,,Windows 10,,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1709 (,,Windows 10,,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1803 (,,Windows 10,,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1809 (,,Windows 10,,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
-d2085b71-5f1f-43a9-880d-ed159016d5c6
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1903 (,,Windows 10,,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1909 (,,Windows 10,,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 2004 (,,Windows 10,,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 20H2 (,,Windows 10,,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-"Windows 10, Version 20H2 (",,Windows 10,,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 21H2 (,,Windows 10,,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
-d2085b71-5f1f-43a9-880d-ed159016d5c6
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 22H2 (,,Windows 10,,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 (KB3125217),,Windows 10,1507,All,x86,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 (KB3125217),,Windows 10,1507,Updates,x86,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 (KB3141032),,Windows 10,1507,All,x86,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 (KB3141032),,Windows 10,1507,Updates,x86,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 (KB3161102),,Windows 10,1507,All,x86,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 (KB3161102),,Windows 10,1507,Updates,x86,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 (KB3173427),,Windows 10,1507,All,x86,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 (KB3173427),,Windows 10,1507,Updates,x86,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 (KB4019474),,Windows 10,1507,All,x86,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 (KB4019474),,Windows 10,1507,Updates,x86,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 for x64-based Systems (KB3125217),,Windows 10,1507,Updates,x64,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 for x64-based Systems (KB3141032),,Windows 10,1507,Updates,x64,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 for x64-based Systems (KB3161102),,Windows 10,1507,Updates,x64,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 for x64-based Systems (KB3173427),,Windows 10,1507,Updates,x64,d2085b71-5f1f-43a9-880d-ed159016d5c6,
+Windows 10 for x64-based Systems (KB4019474),,Windows 10,1507,Updates,x64,d2085b71-5f1f-43a9-880d-ed159016d5c6,
 Windows 10 Version 1507 for x64,,Windows 10,1507,Updates,x64,"a3c2375d-0c8a-42f9-bce0-28333e198407
 d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
@@ -64,16 +37,23 @@ Windows 10 Version 1507 for x86,,Windows 10,1507,Updates,x86,"a3c2375d-0c8a-42f9
 d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 1511 (,,Windows 10,1511,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1511 (,,Windows 10,1511,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
 d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1511 for x64,,Windows 10,1511,Updates,x64,"a3c2375d-0c8a-42f9-bce0-28333e198407
+*Windows 10 Version 1511 for *x64*,Wildcard,Windows 10,1511,Updates,x64,"a3c2375d-0c8a-42f9-bce0-28333e198407
 d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1511 for x86,,Windows 10,1511,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+*Windows 10 Version 1511 for *x86*,Wildcard,Windows 10,1511,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
 d2085b71-5f1f-43a9-880d-ed159016d5c6
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 1607 (,,Windows 10,1607,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1607 (,,Windows 10,1607,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
@@ -82,10 +62,15 @@ abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1607 for AMD64,,Windows 10,1607,Updates,x64,"a3c2375d-0c8a-42f9-bce0-28333e198407
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1607 for x64,,Windows 10,1607,Updates,x64,"a3c2375d-0c8a-42f9-bce0-28333e198407
+*Windows 10 Version 1607 for *x64*,Wildcard,Windows 10,1607,Updates,x64,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-Windows 10 Version 1607 for x86,,Windows 10,1607,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+*Windows 10 Version 1607 for *x86*,Wildcard,Windows 10,1607,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 1703 (,,Windows 10,1703,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1703 (,,Windows 10,1703,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
@@ -95,6 +80,9 @@ Windows 10 Version 1703 for x64,,Windows 10,1703,Updates,x64,"a3c2375d-0c8a-42f9
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1703 for x86,,Windows 10,1703,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 1709 (,,Windows 10,1709,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1709 (,,Windows 10,1709,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
@@ -109,14 +97,17 @@ abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1709 for x86,,Windows 10,1709,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-"Windows 10 (business editions), version 1803* x64",Decline All,Windows 10,1803,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 1803* x86",Decline All,Windows 10,1803,BusinessUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 1803* x64",Wildcard,Windows 10,1803,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 1803* x86",Wildcard,Windows 10,1803,BusinessUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 1803* x64",Wildcard,Windows 10,1803,ConsumerUpgrade,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 1803* x86",Wildcard,Windows 10,1803,ConsumerUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 1803( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,1803,BusinessUpgrade,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 1803( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,1803,BusinessUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 1803* x64",Decline All,Windows 10,1803,ConsumerUpgrade,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 1803* x86",Decline All,Windows 10,1803,ConsumerUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 1803( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,1803,ConsumerUpgrade,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 1803( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,1803,ConsumerUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 1803 (,,Windows 10,1803,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1803 (,,Windows 10,1803,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
@@ -129,14 +120,18 @@ abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1803 for x86,,Windows 10,1803,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-"Windows 10 (business editions), version 1809* x64",Decline All,Windows 10,1809,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 1809* x86",Decline All,Windows 10,1809,BusinessUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 1809* x64",Wildcard,Windows 10,1809,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 1809* x86",Wildcard,Windows 10,1809,BusinessUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 1809* x64",Wildcard,Windows 10,1809,ConsumerUpgrade,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 1809* x86",Wildcard,Windows 10,1809,ConsumerUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 1809( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,1809,BusinessUpgrade,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 1809( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,1809,BusinessUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 1809* x64",Decline All,Windows 10,1809,ConsumerUpgrade,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 1809* x86",Decline All,Windows 10,1809,ConsumerUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 1809( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,1809,ConsumerUpgrade,x64,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 1809( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,1809,ConsumerUpgrade,x86,a3c2375d-0c8a-42f9-bce0-28333e198407,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 1809 (,,Windows 10,1809,All,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
+d2085b71-5f1f-43a9-880d-ed159016d5c6
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1809 (,,Windows 10,1809,Updates,x86,"a3c2375d-0c8a-42f9-bce0-28333e198407
 d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
@@ -153,18 +148,31 @@ Windows 10 Version 1809 for x86,,Windows 10,1809,Updates,x86,"a3c2375d-0c8a-42f9
 d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-"Windows 10 (business editions), version 1903* arm64",Decline All,Windows 10,19H1,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 1903* x64",Decline All,Windows 10,19H1,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 1903* x86",Decline All,Windows 10,19H1,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+GDR-DU: FeatureOnDemandDirectX - Windows 10 Insider Preview 14390 for AMD64,,Windows 10,1607-Preview,Updates,x64,abc45868-0c9c-4bc0-a36d-03d54113baf4,
+GDR-DU: FeatureOnDemandDirectX - Windows 10 Insider Preview 14390 for x86,,Windows 10,1607-Preview,Updates,x86,abc45868-0c9c-4bc0-a36d-03d54113baf4,
+GDR-DU: LanguageFeatureOnDemand - Windows 10 Insider Preview 14390 for AMD64,,Windows 10,1607-Preview,Updates,x64,abc45868-0c9c-4bc0-a36d-03d54113baf4,
+GDR-DU: LanguageFeatureOnDemand - Windows 10 Insider Preview 14390 for x86,,Windows 10,1607-Preview,Updates,x86,abc45868-0c9c-4bc0-a36d-03d54113baf4,
+2018-01 Dynamic Update for Windows 10 Version Next for x64,,Windows 10,1803-Preview,Updates,x64,e4b04398-adbd-4b69-93b9-477322331cd3,
+2018-01 Dynamic Update for Windows 10 Version Next for x86,,Windows 10,1803-Preview,Updates,x86,e4b04398-adbd-4b69-93b9-477322331cd3,
+2018-02 Dynamic Update for Windows 10 Version Next for x64,,Windows 10,1803-Preview,Updates,x64,e4b04398-adbd-4b69-93b9-477322331cd3,
+2018-02 Dynamic Update for Windows 10 Version Next for x86,,Windows 10,1803-Preview,Updates,x86,e4b04398-adbd-4b69-93b9-477322331cd3,
+2018-03 Dynamic Update for Windows 10 Version Next for x64,,Windows 10,1803-Preview,Updates,x64,e4b04398-adbd-4b69-93b9-477322331cd3,
+2018-03 Dynamic Update for Windows 10 Version Next for x86,,Windows 10,1803-Preview,Updates,x86,e4b04398-adbd-4b69-93b9-477322331cd3,
+"Feature update to Windows 10 (business editions), version 1903* arm64",Wildcard,Windows 10,19H1,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 1903* x64",Wildcard,Windows 10,19H1,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 1903* x86",Wildcard,Windows 10,19H1,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 1903* arm64",Wildcard,Windows 10,19H1,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 1903* x64",Wildcard,Windows 10,19H1,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 1903* x86",Wildcard,Windows 10,19H1,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 1903( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,19H1,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 1903( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,19H1,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 1903( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,19H1,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 1903* arm64",Decline All,Windows 10,19H1,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 1903* x64",Decline All,Windows 10,19H1,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 1903* x86",Decline All,Windows 10,19H1,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 1903( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,19H1,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 1903( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,19H1,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 1903( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,19H1,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 1903 (,,Windows 10,19H1,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1903 (,,Windows 10,19H1,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
@@ -177,24 +185,26 @@ abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1903 for x86,,Windows 10,19H1,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-"Windows 10 (business editions), version 1909* arm64",Decline All,Windows 10,19H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 1909* x64",Decline All,Windows 10,19H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 1909* x86",Decline All,Windows 10,19H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 1909* arm64",Wildcard,Windows 10,19H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 1909* x64",Wildcard,Windows 10,19H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 1909* x86",Wildcard,Windows 10,19H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 1909* arm64",Wildcard,Windows 10,19H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 1909* x64",Wildcard,Windows 10,19H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 1909* x86",Wildcard,Windows 10,19H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 1909( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,19H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 1909( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,19H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 1909( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,19H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 1909* arm64",Decline All,Windows 10,19H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 1909* x64",Decline All,Windows 10,19H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 1909* x86",Decline All,Windows 10,19H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 1909( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,19H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 1909( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,19H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 1909( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,19H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Windows 10 Version 1909 ARM64,,Windows 10,19H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Windows 10 Version 1909 x64,,Windows 10,19H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10, version 1909 x86",,Windows 10,19H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 1909 (,,Windows 10,19H2,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1909 (,,Windows 10,19H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 1909 ARM64,,Windows 10,19H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 1909 ARM64,Decline Superseded,Windows 10,19H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 Windows 10 Version 1909 for ARM64,,Windows 10,19H2,Updates,arm64,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
@@ -204,39 +214,46 @@ abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 1909 for x86,,Windows 10,19H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-"Windows 10 (business editions), version 20H1* arm64",Decline All,Windows 10,20H1,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 20H1* x64",Decline All,Windows 10,20H1,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 20H1* x86",Decline All,Windows 10,20H1,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 \(business editions\), version 20H1( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,20H1,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 \(business editions\), version 20H1( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,20H1,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 \(business editions\), version 20H1( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,20H1,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 20H1* arm64",Decline All,Windows 10,20H1,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 20H1* x64",Decline All,Windows 10,20H1,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 20H1* x86",Decline All,Windows 10,20H1,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 \(consumer editions\), version 20H1( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,20H1,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 \(consumer editions\), version 20H1( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,20H1,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 \(consumer editions\), version 20H1( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,20H1,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Windows 10 Version 20H1 ARM64,,Windows 10,20H1,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Windows 10 Version 20H1 x64,,Windows 10,20H1,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10, version 20H1 x86",,Windows 10,20H1,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 20H2* arm64",Decline All,Windows 10,20H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 20H2* x64",Decline All,Windows 10,20H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 20H2* x86",Decline All,Windows 10,20H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 20H2* arm64",Decline All,Windows 10,20H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 20H2* x64",Decline All,Windows 10,20H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 20H2* x86",Decline All,Windows 10,20H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 1909 x64,,Windows 10,19H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 1909 x64,Decline Superseded,Windows 10,19H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 1909 x86",,Windows 10,19H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 1909 x86",Decline Superseded,Windows 10,19H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 2004* arm64",Wildcard,Windows 10,20H1,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 2004* x64",Wildcard,Windows 10,20H1,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 2004* x86",Wildcard,Windows 10,20H1,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 2004* arm64",Wildcard,Windows 10,20H1,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 2004* x64",Wildcard,Windows 10,20H1,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 2004* x86",Wildcard,Windows 10,20H1,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10 \(business editions\), version 2004( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,20H1,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10 \(business editions\), version 2004( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,20H1,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10 \(business editions\), version 2004( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,20H1,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10 \(consumer editions\), version 2004( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,20H1,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10 \(consumer editions\), version 2004( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,20H1,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10 \(consumer editions\), version 2004( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,20H1,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 2004 (,,Windows 10,20H1,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 2004 ARM64,,Windows 10,20H1,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 2004 ARM64,Decline Superseded,Windows 10,20H1,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 2004 x64,,Windows 10,20H1,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 2004 x64,Decline Superseded,Windows 10,20H1,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 2004 x86",,Windows 10,20H1,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 2004 x86",Decline Superseded,Windows 10,20H1,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 20H2* arm64",Wildcard,Windows 10,20H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 20H2* arm64",Wildcard,Windows 10,20H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 20H2* x64",Wildcard,Windows 10,20H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 20H2* x64",Wildcard,Windows 10,20H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 20H2* x86",Wildcard,Windows 10,20H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 20H2* x86",Wildcard,Windows 10,20H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 20H2* arm64",Wildcard,Windows 10,20H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 20H2* x64",Wildcard,Windows 10,20H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 20H2* x86",Wildcard,Windows 10,20H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 20H2( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,20H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 20H2( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,20H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 20H2( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,20H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 20H2* arm64",Decline All,Windows 10,20H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 20H2* x64",Decline All,Windows 10,20H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 20H2* x86",Decline All,Windows 10,20H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 20H2( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,20H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 20H2( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,20H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 20H2( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,20H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Windows 10 Version 20H2 ARM64,,Windows 10,20H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Windows 10 Version 20H2 x64,,Windows 10,20H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10, version 20H2 x86",,Windows 10,20H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 Windows 10 Version 2004 (,,Windows 10,20H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
@@ -249,9 +266,14 @@ abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 2004 for x86,,Windows 10,20H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 20H2 (,,Windows 10,20H2,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 20H2 (,,Windows 10,20H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 20H2 ARM64,,Windows 10,20H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 20H2 ARM64,Decline Superseded,Windows 10,20H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 Windows 10 Version 20H2 for ARM64,,Windows 10,20H2,Updates,arm64,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
@@ -259,6 +281,11 @@ Windows 10 Version 20H2 for x64,,Windows 10,20H2,Updates,x64,"b3c75dc1-155f-4be4
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 20H2 for x86,,Windows 10,20H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 20H2 x64,,Windows 10,20H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 20H2 x64,Decline Superseded,Windows 10,20H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, Version 20H2 (",,Windows 10,20H2,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
 "Windows 10, Version 20H2 (",,Windows 10,20H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
@@ -273,40 +300,68 @@ abc45868-0c9c-4bc0-a36d-03d54113baf4",
 "Windows 10, Version 20H2 for x86",,Windows 10,20H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-"Windows 10 (business editions), version 21H1* arm64",Decline All,Windows 10,21H1,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 21H1* x64",Decline All,Windows 10,21H1,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 21H1* x86",Decline All,Windows 10,21H1,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 20H2 x86",,Windows 10,20H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 20H2 x86",Decline Superseded,Windows 10,20H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 21H1* arm64",Wildcard,Windows 10,21H1,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 21H1* x64",Wildcard,Windows 10,21H1,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 21H1* x86",Wildcard,Windows 10,21H1,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 21H1* arm64",Wildcard,Windows 10,21H1,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 21H1* x64",Wildcard,Windows 10,21H1,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 21H1* x86",Wildcard,Windows 10,21H1,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 21H1( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,21H1,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 21H1( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,21H1,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 21H1( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,21H1,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 21H1* arm64",Decline All,Windows 10,21H1,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 21H1* x64",Decline All,Windows 10,21H1,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 21H1* x86",Decline All,Windows 10,21H1,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 21H1( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,21H1,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 21H1( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,21H1,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 21H1( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,21H1,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 21H1 (,,Windows 10,21H1,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+d2085b71-5f1f-43a9-880d-ed159016d5c6
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 21H1 (,,Windows 10,21H1,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+d2085b71-5f1f-43a9-880d-ed159016d5c6
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 21H1 ARM64,,Windows 10,21H1,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 21H1 ARM64,Decline Superseded,Windows 10,21H1,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 21H1 for ARM64,,Windows 10,21H1,Updates,arm64,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+d2085b71-5f1f-43a9-880d-ed159016d5c6
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 21H1 for x64,,Windows 10,21H1,Updates,x64,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+d2085b71-5f1f-43a9-880d-ed159016d5c6
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 21H1 for x86,,Windows 10,21H1,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+d2085b71-5f1f-43a9-880d-ed159016d5c6
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 21H1 x64,,Windows 10,21H1,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 21H1 x64,Decline Superseded,Windows 10,21H1,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10, version 21H1 x86",,Windows 10,21H1,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 21H2* arm64",Decline All,Windows 10,21H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 21H2* x64",Decline All,Windows 10,21H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 21H2* x86",Decline All,Windows 10,21H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 21H1 x86",Decline Superseded,Windows 10,21H1,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 21H2* arm64",Wildcard,Windows 10,21H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 21H2* x64",Wildcard,Windows 10,21H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 21H2* x86",Wildcard,Windows 10,21H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 21H2* arm64",Wildcard,Windows 10,21H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 21H2* x64",Wildcard,Windows 10,21H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 21H2* x86",Wildcard,Windows 10,21H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 21H2( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,21H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 21H2( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,21H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 21H2( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,21H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 21H2* arm64",Decline All,Windows 10,21H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 21H2* x64",Decline All,Windows 10,21H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 21H2* x86",Decline All,Windows 10,21H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 21H2( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,21H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 21H2( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,21H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 21H2( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,21H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Windows 10 Version 21H2 ARM64,,Windows 10,21H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Windows 10 Version 21H2 x64,,Windows 10,21H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10, version 21H2 x86",,Windows 10,21H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 21H2 (,,Windows 10,21H2,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+d2085b71-5f1f-43a9-880d-ed159016d5c6
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 21H2 (,,Windows 10,21H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 21H2 ARM64,,Windows 10,21H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 21H2 ARM64,Decline Superseded,Windows 10,21H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 Windows 10 Version 21H2 for ARM64,,Windows 10,21H2,Updates,arm64,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
@@ -319,24 +374,30 @@ Windows 10 Version 21H2 for x86,,Windows 10,21H2,Updates,x86,"b3c75dc1-155f-4be4
 d2085b71-5f1f-43a9-880d-ed159016d5c6
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-"Windows 10 (business editions), version 22H2* arm64",Decline All,Windows 10,22H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 22H2* x64",Decline All,Windows 10,22H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (business editions), version 22H2* x86",Decline All,Windows 10,22H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 21H2 x64,,Windows 10,21H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 21H2 x64,Decline Superseded,Windows 10,21H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 21H2 x86",,Windows 10,21H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 21H2 x86",Decline Superseded,Windows 10,21H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 22H2* arm64",Wildcard,Windows 10,22H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 22H2* x64",Wildcard,Windows 10,22H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (business editions), version 22H2* x86",Wildcard,Windows 10,22H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 22H2* arm64",Wildcard,Windows 10,22H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 22H2* x64",Wildcard,Windows 10,22H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Feature update to Windows 10 (consumer editions), version 22H2* x86",Wildcard,Windows 10,22H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 22H2( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,22H2,BusinessUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 22H2( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,22H2,BusinessUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(business editions\), version 22H2( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,22H2,BusinessUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 22H2* arm64",Decline All,Windows 10,22H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 22H2* x64",Decline All,Windows 10,22H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10 (consumer editions), version 22H2* x86",Decline All,Windows 10,22H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 22H2( |, )(?<Language>.*?)( |, )arm64",Windows 10 FU Exclude Languages,Windows 10,22H2,ConsumerUpgrade,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 22H2( |, )(?<Language>.*?)( |, )x64",Windows 10 FU Exclude Languages,Windows 10,22H2,ConsumerUpgrade,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 10 \(consumer editions\), version 22H2( |, )(?<Language>.*?)( |, )x86",Windows 10 FU Exclude Languages,Windows 10,22H2,ConsumerUpgrade,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Windows 10 Version 22H2 ARM64,,Windows 10,22H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Windows 10 Version 22H2 x64,,Windows 10,22H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 10, version 22H2 x86",,Windows 10,22H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 22H2 (,,Windows 10,22H2,All,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 22H2 (,,Windows 10,22H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
+Windows 10 Version 22H2 ARM64,,Windows 10,22H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 22H2 ARM64,Decline Superseded,Windows 10,22H2,EnablementPackage,arm64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 Windows 10 Version 22H2 for ARM64,,Windows 10,22H2,Updates,arm64,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
@@ -346,4 +407,7 @@ abc45868-0c9c-4bc0-a36d-03d54113baf4",
 Windows 10 Version 22H2 for x86,,Windows 10,22H2,Updates,x86,"b3c75dc1-155f-4be4-b015-3f1a91758e52
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4",
-,,,,,,,
+Windows 10 Version 22H2 x64,,Windows 10,22H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Windows 10 Version 22H2 x64,Decline Superseded,Windows 10,22H2,EnablementPackage,x64,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 22H2 x86",,Windows 10,22H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 10, version 22H2 x86",Decline Superseded,Windows 10,22H2,EnablementPackage,x86,b3c75dc1-155f-4be4-b015-3f1a91758e52,3689bdc8-b205-4af4-8d4a-a63924c5e9d5

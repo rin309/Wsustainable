@@ -28,7 +28,7 @@ Function Global:Get-DeclineRules($Config){
                 $_.Version -eq $ChooseVersion.Version -and # version
                 (-not $ChooseVersion.($_.Architecture)) -and ($True -in $Config.ChooseVersions.'Windows 11'.($_.Architecture)) -and # architecture
                 $_.Type -ne "All" -and # type
-                ($_.RegexMode -ne "Windows 11 FU Exclude Languages") # filtertype
+                ($_.Mode -ne "Windows 11 FU Exclude Languages") # filtertype
             } | ForEach-Object {
                 $DeclineRules += $_
             }
@@ -39,7 +39,7 @@ Function Global:Get-DeclineRules($Config){
                 $ChooseVersion = $_
                 $Filter | Where-Object {
                     $_.Type -eq "BusinessUpgrade" -and ($True -in $Config.ChooseVersions.'Windows 11'.($_.Architecture)) -and # architecture
-                    ($_.RegexMode -ne "Windows 11 FU Exclude Languages") # filtertype
+                    ($_.Mode -ne "Windows 11 FU Exclude Languages") # filtertype
                 } | ForEach-Object {
                     $DeclineRules += $_
                 }
@@ -51,13 +51,13 @@ Function Global:Get-DeclineRules($Config){
                 $ChooseVersion = $_
                 $Filter | Where-Object {
                     $_.Type -eq "ConsumerUpgrade" -and # type
-                    ($_.RegexMode -ne "Windows 11 FU Exclude Languages") # filtertype
+                    ($_.Mode -ne "Windows 11 FU Exclude Languages") # filtertype
                 } | ForEach-Object {
                     $DeclineRules += $_
                 }
             }
         }
-        ## Upgrades
+        ## Upgrades: Exclude Languages
         If ($Config.ChooseProducts.'Windows 11'.ExcludeLanguages -ne $Null){
             $Config.ChooseVersions.'Windows 11' | ForEach-Object {
                 $ChooseVersion = $_
@@ -65,7 +65,21 @@ Function Global:Get-DeclineRules($Config){
                     $_.Version -eq $ChooseVersion.Version -and # version
                     ($ChooseVersion.($_.Architecture)) -and ($True -in $Config.ChooseVersions.'Windows 11'.($_.Architecture)) -and # architecture
                     ($_.Type -eq "BusinessUpgrade" -or $_.Type -eq "ConsumerUpgrade") -and # type
-                    $_.RegexMode -eq "Windows 11 FU Exclude Languages" # filtertype
+                    $_.Mode -eq "Windows 11 FU Exclude Languages" # filtertype
+                } | ForEach-Object {
+                    $DeclineRules += $_
+                }
+            }
+        }
+        ## Upgrades: Superseded
+        If ($Config.ChooseProducts.'Windows 11'.DeclineSupersededUpgrades -ne $Null){
+            $Config.ChooseVersions.'Windows 11' | ForEach-Object {
+                $ChooseVersion = $_
+                $Filter | Where-Object {
+                    $_.Version -eq $ChooseVersion.Version -and # version
+                    ($ChooseVersion.($_.Architecture)) -and ($True -in $Config.ChooseVersions.'Windows 11'.($_.Architecture)) -and # architecture
+                    ($_.Type -eq "BusinessUpgrade" -or $_.Type -eq "ConsumerUpgrade" -or $_.Type -eq "EnablementPackage") -and # type
+                    $_.Mode -eq "Decline Superseded" # filtertype
                 } | ForEach-Object {
                     $DeclineRules += $_
                 }
@@ -75,7 +89,7 @@ Function Global:Get-DeclineRules($Config){
         $Filter | Where-Object { 
             ($True -notin $Config.ChooseVersions.'Windows 11'.($_.Architecture)) -and # architecture
             $_.Type -eq "All" -and # type
-            ($_.RegexMode -ne "Windows 11 FU Exclude Languages") # filtertype
+            ($_.Mode -ne "Windows 11 FU Exclude Languages") # filtertype
         } | ForEach-Object {
             $DeclineRules += $_
         }
@@ -97,7 +111,19 @@ Function Global:Get-DeclineRules($Config){
                 $_.Version -eq $ChooseVersion.Version -and # version
                 (-not $ChooseVersion.($_.Architecture)) -and ($True -in $Config.ChooseVersions.'Windows 10'.($_.Architecture)) -and # architecture
                 $_.Type -ne "All" -and # type
-                ($_.RegexMode -ne "Windows 10 FU Exclude Languages") # filtertype
+                ($_.Mode -ne "Windows 10 FU Exclude Languages") # filtertype
+            } | ForEach-Object {
+                $DeclineRules += $_
+            }
+        }
+        ## Preview
+        $Config.ChooseVersions.'Windows 10' | ForEach-Object {
+            $ChooseVersion = $_
+            $Filter | Where-Object { 
+                $_.Version -eq "$($ChooseVersion.Version)-Preview" -and # version
+                (-not $ChooseVersion.($_.Architecture)) -and ($True -in $Config.ChooseVersions.'Windows 10'.($_.Architecture)) -and # architecture
+                $_.Type -ne "All" -and # type
+                ($_.Mode -ne "Windows 10 FU Exclude Languages") # filtertype
             } | ForEach-Object {
                 $DeclineRules += $_
             }
@@ -108,7 +134,7 @@ Function Global:Get-DeclineRules($Config){
                 $ChooseVersion = $_
                 $Filter | Where-Object {
                     $_.Type -eq "BusinessUpgrade" -and ($True -in $Config.ChooseVersions.'Windows 10'.($_.Architecture)) -and # architecture
-                    ($_.RegexMode -ne "Windows 10 FU Exclude Languages") # filtertype
+                    ($_.Mode -ne "Windows 10 FU Exclude Languages") # filtertype
                 } | ForEach-Object {
                     $DeclineRules += $_
                 }
@@ -120,13 +146,13 @@ Function Global:Get-DeclineRules($Config){
                 $ChooseVersion = $_
                 $Filter | Where-Object {
                     $_.Type -eq "ConsumerUpgrade" -and # type
-                    ($_.RegexMode -ne "Windows 10 FU Exclude Languages") # filtertype
+                    ($_.Mode -ne "Windows 10 FU Exclude Languages") # filtertype
                 } | ForEach-Object {
                     $DeclineRules += $_
                 }
             }
         }
-        ## Upgrades
+        ## Upgrades: Exclude Languages
         If ($Config.ChooseProducts.'Windows 10'.ExcludeLanguages -ne $Null){
             $Config.ChooseVersions.'Windows 10' | ForEach-Object {
                 $ChooseVersion = $_
@@ -134,7 +160,21 @@ Function Global:Get-DeclineRules($Config){
                     $_.Version -eq $ChooseVersion.Version -and # version
                     ($ChooseVersion.($_.Architecture)) -and ($True -in $Config.ChooseVersions.'Windows 10'.($_.Architecture)) -and # architecture
                     ($_.Type -eq "BusinessUpgrade" -or $_.Type -eq "ConsumerUpgrade") -and # type
-                    $_.RegexMode -eq "Windows 10 FU Exclude Languages" # filtertype
+                    $_.Mode -eq "Windows 10 FU Exclude Languages" # filtertype
+                } | ForEach-Object {
+                    $DeclineRules += $_
+                }
+            }
+        }
+        ## Upgrades: Superseded
+        If ($Config.ChooseProducts.'Windows 10'.DeclineSupersededUpgrades -ne $Null){
+            $Config.ChooseVersions.'Windows 10' | ForEach-Object {
+                $ChooseVersion = $_
+                $Filter | Where-Object {
+                    $_.Version -eq $ChooseVersion.Version -and # version
+                    ($ChooseVersion.($_.Architecture)) -and ($True -in $Config.ChooseVersions.'Windows 10'.($_.Architecture)) -and # architecture
+                    ($_.Type -eq "BusinessUpgrade" -or $_.Type -eq "ConsumerUpgrade" -or $_.Type -eq "EnablementPackage") -and # type
+                    $_.Mode -eq "Decline Superseded" # filtertype
                 } | ForEach-Object {
                     $DeclineRules += $_
                 }
@@ -144,7 +184,7 @@ Function Global:Get-DeclineRules($Config){
         $Filter | Where-Object { 
             ($True -notin $Config.ChooseVersions.'Windows 10'.($_.Architecture)) -and # architecture
             $_.Type -eq "All" -and # type
-            ($_.RegexMode -ne "Windows 10 FU Exclude Languages") # filtertype
+            ($_.Mode -ne "Windows 10 FU Exclude Languages") # filtertype
         } | ForEach-Object {
             $DeclineRules += $_
         }
@@ -165,7 +205,7 @@ Function Global:Get-DeclineRules($Config){
         $Filter | Where-Object { 
                 ($_.Architecture -eq "all") -and # architecture
                 (-not $Config.ChooseProducts.'Microsoft Edge'.($_.Type)) -and # type
-                ($_.RegexMode -ne "Decline Old Version") # filtertype
+                ($_.Mode -ne "Decline Old Version") # filtertype
             } | ForEach-Object {
                 $DeclineRules += $_
             }
@@ -175,7 +215,7 @@ Function Global:Get-DeclineRules($Config){
                 ($_.Architecture -ne "all") -and # exclude first choice
                 (-not $Config.ChooseProducts.'Microsoft Edge'.($_.Architecture)) -and # architecture
                 $Config.ChooseProducts.'Microsoft Edge'.($_.Type) -and # type
-                ($_.RegexMode -ne "Decline Old Version") # filtertype
+                ($_.Mode -ne "Decline Old Version") # filtertype
             } | ForEach-Object {
                 $DeclineRules += $_
             }
@@ -186,7 +226,7 @@ Function Global:Get-DeclineRules($Config){
                 ($_.Architecture -ne "all") -and # exclude first choice
                 ($Config.ChooseProducts.'Microsoft Edge'.($_.Architecture)) -and # architecture
                 $Config.ChooseProducts.'Microsoft Edge'.($_.Type) -and # type
-                $_.RegexMode -eq "Decline Old Version" # filtertype
+                $_.Mode -eq "Decline Old Version" # filtertype
             } | ForEach-Object {
                 $DeclineRules += $_
             }
@@ -206,7 +246,7 @@ Function Global:Get-DeclineRules($Config){
         ## decline architecture
         $Filter | Where-Object {
                 (-not $Config.ChooseProducts.'Malicious Software Removal Tool'.($_.Architecture)) -and # architecture
-                (-not $_.RegexMode) # filtertype
+                (-not $_.Mode) # filtertype
             } | ForEach-Object {
                 $DeclineRules += $_
             }
@@ -215,7 +255,7 @@ Function Global:Get-DeclineRules($Config){
         If ($Config.ChooseProducts.'Malicious Software Removal Tool'.DeclineOldVersion){
             $Filter | Where-Object { 
                 $Config.ChooseProducts.'Malicious Software Removal Tool'.($_.Architecture) -and # architecture
-                $_.RegexMode # filtertype
+                $_.Mode # filtertype
             } | ForEach-Object {
                 $DeclineRules += $_
             }

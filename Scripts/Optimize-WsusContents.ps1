@@ -48,13 +48,13 @@ Function Optimize-WsusContents{
         $Global:UpdatesResult = @()
         Get-WsusFilteredUpdates $DeclineRule $UpdateScope $RetryCount $Month $FindMode
 
-        If (-not [String]::IsNullOrEmpty($DeclineRule.RegexMode)){
-            Write-Verbose "[Deny-WsusFilteredUpdates] RegexMode: $($DeclineRule.RegexMode)"
-            switch ($DeclineRule.RegexMode){
-                "Decline All" {
+        If (-not [String]::IsNullOrEmpty($DeclineRule.Mode)){
+            Write-Verbose "[Deny-WsusFilteredUpdates] Mode: $($DeclineRule.Mode)"
+            switch ($DeclineRule.Mode){
+                "Wildcard" {
                     $Updates = @($UpdatesResult | Where-Object Title -like $DeclineRule.Filter)
-                    Write-Verbose "$(Get-Date -Format F): [Decline All] Updates.Count: $($Updates.Count) / UpdatesResult.Count: $($UpdatesResult.Count)"
-                    Write-Verbose "$(Get-Date -Format F): [Decline All] Filter: $($DeclineRule.Filter)"
+                    Write-Verbose "$(Get-Date -Format F): [Wildcard] Updates.Count: $($Updates.Count) / UpdatesResult.Count: $($UpdatesResult.Count)"
+                    Write-Verbose "$(Get-Date -Format F): [Wildcard] Filter: $($DeclineRule.Filter)"
                     $DeclineUpdateCount = 0
                     $ActionDetails = ""
 
@@ -72,7 +72,7 @@ Function Optimize-WsusContents{
                             }
                         }
                     }
-                    Write-Verbose "$(Get-Date -Format F): [Decline All] Denied: $DeclineUpdateCount"
+                    Write-Verbose "$(Get-Date -Format F): [Wildcard] Denied: $DeclineUpdateCount"
                 }
                 "Windows 11 FU Exclude Languages" {
                     $Updates = @($UpdatesResult | Where-Object {$_.Title -match $DeclineRule.Filter} | Select-Object @{Name="Item";Expression={$_}}, @{Name="Language";Expression={$_.Title -match $DeclineRule.Filter | Out-Null; Return $Matches["Language"]}} | Where-Object Language -ne $Null)
@@ -133,7 +133,7 @@ Function Optimize-WsusContents{
                     Write-Verbose "$(Get-Date -Format F): [Decline Old Version] Filter: $($DeclineRule.Filter)"
                     Write-Verbose "$(Get-Date -Format F): [Decline Old Version] LatestVersion: $LatestVersion"
                     $DeclineUpdateCount = 0
-                            $ActionDetails = ""
+                    $ActionDetails = ""
 
                     $Updates | Where-Object Version -ne $LatestVersion | ForEach-Object{
                         $Update = $_.Item
@@ -152,8 +152,31 @@ Function Optimize-WsusContents{
                     }
                     Write-Verbose "$(Get-Date -Format F): [Decline Old Version] Denied: $DeclineUpdateCount"
                 }
+                "Decline Superseded" {
+                    $Updates = @($UpdatesResult | Where-Object {$_.Title -match $DeclineRule.Filter -and $_.IsSuperseded} | Select-Object @{Name="Item";Expression={$_}})
+                    Write-Verbose "$(Get-Date -Format F): [Decline Superseded] Updates.Count: $($Updates.Count) / UpdatesResult.Count: $($UpdatesResult.Count)"
+                    Write-Verbose "$(Get-Date -Format F): [Decline Superseded] Filter: $($DeclineRule.Filter)"
+                    $DeclineUpdateCount = 0
+                    $ActionDetails = ""
+
+                    $Updates | ForEach-Object{
+                        $Update = $_.Item
+                        $Update.Decline() | Out-Null
+                        $DeclineUpdateCount++
+                        
+                        If ($CurrentConfig.Log.IsLogging){
+                            If ($CurrentConfig.Log.Verbose){
+                                $Update | Select-Object Title, @{Name="ProductTitles";Expression={($_.GetUpdateCategories().Title -Join "`n")}}, @{Name="ProductIds";Expression={($_.GetUpdateCategories().Id -Join "`n")}}, CreationDate, LegacyName, @{Name="Id.RevisionNumber";Expression={($_.Id.RevisionNumber -Join "`n")}}, @{Name="Id.UpdateId";Expression={($_.Id.UpdateId -Join "`n")}}, @{Name="KnowledgebaseArticles";Expression={($_.KnowledgebaseArticles -Join "`n")}}, @{Name="SecurityBulletins";Expression={($_.SecurityBulletins -Join "`n")}}, UpdateClassificationTitle, @{Name="UpdateClassificationId";Expression={($_.GetUpdateClassification().Id -Join "`n")}}, @{Name="ProductFamilyTitles";Expression={($_.ProductFamilyTitles -Join "`n")}}, UpdateType, @{Name="Action";Expression={$ActionDetails}} | Export-Csv -Path (Join-Path $LogDirectory "$LogFileName.csv") -Encoding UTF8 -NoTypeInformation -Append | Out-Null
+                            }
+                            Else{
+                                $Update | Select-Object Title, LegacyName, UpdateClassificationTitle, @{Name="UpdateClassificationId";Expression={($_.GetUpdateClassification().Id -Join "`n")}} | Export-Csv -Path (Join-Path $LogDirectory "$LogFileName.csv") -Encoding UTF8 -NoTypeInformation -Append | Out-Null
+                            }
+                        }
+                    }
+                    Write-Verbose "$(Get-Date -Format F): [Decline Superseded] Denied: $DeclineUpdateCount"
+                }
                 default {
-                    Write-Warning "[Deny-WsusFilteredUpdates] Not supported RegexMode: $($DeclineRule.RegexMode)"
+                    Write-Warning "[Deny-WsusFilteredUpdates] Not supported Mode: $($DeclineRule.Mode)"
                 }
             }
         }
@@ -251,8 +274,8 @@ Function Optimize-WsusContents{
         Try {
             $Updates = $WsusServer.GetUpdates($UpdateScope)
 
-            If ([String]::IsNullOrEmpty($DeclineRule.RegexMode)){
-                Write-Verbose "[Deny-WsusFilteredUpdates] Find TextIncludes (NotRegexMode)"
+            If ([String]::IsNullOrEmpty($DeclineRule.Mode)){
+                Write-Verbose "[Deny-WsusFilteredUpdates] Find TextIncludes (NotMode)"
                 $Updates = $Updates | ForEach-Object {
                     $ActionDetails = ""
                     $Update = $_
@@ -307,28 +330,69 @@ Function Optimize-WsusContents{
         Return
 
     }
-    Function Stop-WsusSynchronization($WsusServer, $TimeOut){
+    Function Start-WsusServerSynchronization($WsusServer, $TimeOut){
+        If ($TimeOut -eq $Null){
+            $TimeOut = (Get-Date).AddMinutes(120)
+        }
+        Switch ($WsusServer.GetSubscription().GetSynchronizationStatus()){
+            ([Microsoft.UpdateServices.Administration.SynchronizationStatus]::NotProcessing){
+                If (-not $RunningStartWsusServerSynchronization){
+                    $Global:RunningStartWsusServerSynchronization = $True
+                    Write-Verbose "$(Get-Date -Format F): [Start-WsusServerSynchronization] Starting now..."
+                    $WsusServer.GetSubscription().StartSynchronization()
+                    Start-Sleep -Seconds 10
+                    Start-WsusServerSynchronization -WsusServer $WsusServer -TimeOut $TimeOut
+                }
+                Else{
+                    Write-Verbose "$(Get-Date -Format F): [Start-WsusServerSynchronization] Not processing."
+                }
+            }
+            ([Microsoft.UpdateServices.Administration.SynchronizationStatus]::Running){
+                $Global:RunningStartWsusServerSynchronization = $True
+                If ((Get-Date) -ge $TimeOut){
+                    Write-Error "$(Get-Date -Format F): [Start-WsusServerSynchronization] Timed out."
+                }
+                Else{
+                    Write-Verbose "$(Get-Date -Format F): [Start-WsusServerSynchronization] Running now... $($WsusServer.GetSubscription().GetSynchronizationProgress().ProcessedItems) / $($WsusServer.GetSubscription().GetSynchronizationProgress().TotalItems)"
+                    Start-Sleep -Seconds 10
+                    Start-WsusServerSynchronization -WsusServer $WsusServer -TimeOut $TimeOut
+                }
+            }
+            ([Microsoft.UpdateServices.Administration.SynchronizationStatus]::Stopping){
+                If ((Get-Date) -ge $TimeOut){
+                    Write-Error "$(Get-Date -Format F): [Start-WsusServerSynchronization] Timed out."
+                }
+                Else{
+                    Write-Verbose "$(Get-Date -Format F): [Start-WsusServerSynchronization] Stopping now..."
+                    Start-Sleep -Seconds 10
+                    Start-WsusServerSynchronization -WsusServer $WsusServer -TimeOut $TimeOut
+                }
+            }
+        }
+        $Global:RunningStartWsusServerSynchronization = $False
+    }
+    Function Stop-WsusServerSynchronization($WsusServer, $TimeOut){
         If ($TimeOut -eq $Null){
             $TimeOut = (Get-Date).AddMinutes(10)
         }
         Switch ($WsusServer.GetSubscription().GetSynchronizationStatus()){
             ([Microsoft.UpdateServices.Administration.SynchronizationStatus]::NotProcessing){
-                Write-Verbose "$(Get-Date -Format F): [Stop-WsusSynchronization] Already stopped."
+                Write-Verbose "$(Get-Date -Format F): [Stop-WsusServerSynchronization] Already stopped."
             }
             ([Microsoft.UpdateServices.Administration.SynchronizationStatus]::Running){
-                Write-Verbose "$(Get-Date -Format F): [Stop-WsusSynchronization] Stopping now..."
+                Write-Verbose "$(Get-Date -Format F): [Stop-WsusServerSynchronization] Stopping now..."
                 $WsusServer.GetSubscription().StopSynchronization()
                 Start-Sleep -Seconds 5
-                Stop-WsusSynchronization -WsusServer $WsusServer -TimeOut $TimeOut
+                Stop-WsusServerSynchronization -WsusServer $WsusServer -TimeOut $TimeOut
             }
             ([Microsoft.UpdateServices.Administration.SynchronizationStatus]::Stopping){
                 If ((Get-Date) -ge $TimeOut){
-                    Write-Error "$(Get-Date -Format F): [Stop-WsusSynchronization] Timed out."
+                    Write-Error "$(Get-Date -Format F): [Stop-WsusServerSynchronization] Timed out."
                 }
                 Else{
-                    Write-Verbose "$(Get-Date -Format F): [Stop-WsusSynchronization] Stopping now..."
+                    Write-Verbose "$(Get-Date -Format F): [Stop-WsusServerSynchronization] Stopping now..."
                     Start-Sleep -Seconds 10
-                    Stop-WsusSynchronization -WsusServer $WsusServer -TimeOut $TimeOut
+                    Stop-WsusServerSynchronization -WsusServer $WsusServer -TimeOut $TimeOut
                 }
             }
         }
@@ -376,7 +440,10 @@ Function Optimize-WsusContents{
     If ($CurrentConfig.Wsus.PreferredCulture -ne $Null){
         $WsusServer.PreferredCulture = $CurrentConfig.Wsus.PreferredCulture
     }
-    Stop-WsusSynchronization -WsusServer $WsusServer
+    If ($CurrentConfig.Wsus.InvokeWsusSynchronization){
+        Start-WsusServerSynchronization -WsusServer $WsusServer
+    }
+    Stop-WsusServerSynchronization -WsusServer $WsusServer
 
     $ApprovedStates = [Microsoft.UpdateServices.Administration.ApprovedStates]::unknown
     If ($FistLaunch){
@@ -408,9 +475,9 @@ Function Optimize-WsusContents{
 
     @($CurrentConfig.DeclineRules) | ForEach-Object {
         $DeclineRule = $_
-        Write-Verbose "`n[DeclineRule] RegexMode: $($_.RegexMode), Product: $($_.Product), Version: $($_.Version), Type: $($_.Type), Architecture: $($_.Architecture)`n"
+        Write-Verbose "`n[DeclineRule] Mode: $($_.Mode), Product: $($_.Product), Version: $($_.Version), Type: $($_.Type), Architecture: $($_.Architecture)`n"
         # generate logfilename
-        $Global:LogFileName = "$($_.Product)-$($_.Version)-$($_.Architecture)-$($_.Type)-$($_.RegexMode)"
+        $Global:LogFileName = "$($_.Product)-$($_.Version)-$($_.Architecture)-$($_.Type)-$($_.Mode)"
         [System.IO.Path]::GetInvalidFileNameChars() | ForEach-Object {$Global:LogFileName = $LogFileName.Replace("$_","")}
 
         $UpdateScope = New-Object Microsoft.UpdateServices.Administration.UpdateScope
@@ -428,10 +495,13 @@ Function Optimize-WsusContents{
                 }
             }
             @($DeclineRule.TargetClassifications -split "`n") | ForEach-Object {
-                $UpdateClassification | Where-Object Id -eq $_ | ForEach-Object {$UpdateScope.Classifications.Add($_) | Out-Null}
+                $UpdateClassification | Where-Object Id -eq $_ | ForEach-Object {
+                    $UpdateScope.Classifications.Add($_) | Out-Null
+                    Write-Verbose "[DeclineRule] TargetClassifications: $($_.Title), TargetProductId: $($_.Id)"
+                }
             }
             Try{
-                If (-not $_.RegexMode -and $CurrentConfig.ChooseProducts.($_.Product).FilterType -eq "Title"){
+                If (-not $_.Mode -and $CurrentConfig.ChooseProducts.($_.Product).FilterType -eq "Title"){
                     Write-Verbose "[DeclineRule] Set to TextIncludes: $($_.Filter)"
                     $UpdateScope.TextIncludes = $_.Filter
                 }

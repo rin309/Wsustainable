@@ -9,9 +9,10 @@
                  "Port":  8530,
                  "IisWsusPoolPath":  "iis:\\AppPools\\WsusPool",
                  "UseSsl":  false,
-                 "PreferredCulture":  "en"
+                 "PreferredCulture":  "en",
+                 "InvokeWsusSynchronization": false
              },
-    "RequiresVersion":  "0.2024.331",
+    "RequiresVersion":  "0.2024.504",
     "UpdatesFindMode":  {
                             "ApprovedStates":  [
                                                    "NotApproved",
@@ -32,14 +33,17 @@
                                 "FilterType": "Title",
                                 "BusinessUpgrade":  true,
                                 "ConsumerUpgrade":  true,
-                                "ExcludeLanguages": "ja-jp"
+                                "ExcludeLanguages": "ja-jp",
+                                "DeclineSupersededUpgrades":  true
                             },
                             "Windows 10":  {
                                 "Configure": false,
                                 "FilterType": "Title",
                                 "BusinessUpgrade":  true,
                                 "ConsumerUpgrade":  true,
-                                "ExcludeLanguages": "ja-jp"
+                                "ExcludeLanguages": "ja-jp",
+                                "DeclinePreviewUpdate": true,
+                                "DeclineSupersededUpgrades":  true
                             },
                             "Microsoft Edge":  {
                                                 "Configure": false,

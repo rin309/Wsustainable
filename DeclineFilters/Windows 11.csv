@@ -1,77 +1,17 @@
-﻿Filter,RegexMode,Product,Version,Type,Architecture,TargetProductId,TargetClassifications
-x64,,Windows 11,,All,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
-ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
-b6ea7c03-5339-4d45-a215-314a05fe37e0",
+﻿Filter,Mode,Product,Version,Type,Architecture,TargetProductId,TargetClassifications
 arm64,,Windows 11,,All,arm64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
 ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
 b6ea7c03-5339-4d45-a215-314a05fe37e0",
-for Windows 11 for x64,,Windows 11,21H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+x64,,Windows 11,,All,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
 ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
-b6ea7c03-5339-4d45-a215-314a05fe37e0
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4
-dd1aa213-54e7-4173-8456-b278964a26b6",
-for Windows 11 for ARM64,,Windows 11,21H2,Updates,arm64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
-ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
-b6ea7c03-5339-4d45-a215-314a05fe37e0
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4
-dd1aa213-54e7-4173-8456-b278964a26b6",
-Upgrade to Windows 11 (business editions) * x64,Decline All,Windows 11,21H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Upgrade to Windows 11 (business editions) * arm64,Decline All,Windows 11,21H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Upgrade to Windows 11 (consumer editions) * x64,Decline All,Windows 11,21H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Upgrade to Windows 11 (consumer editions) * arm64,Decline All,Windows 11,21H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Upgrade to Windows 11 \(business editions\) (?<Language>.*?) x64,Windows 11 FU Exclude Languages,Windows 11,21H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Upgrade to Windows 11 \(business editions\) (?<Language>.*?) arm64,Windows 11 FU Exclude Languages,Windows 11,21H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Upgrade to Windows 11 \(consumer editions\) (?<Language>.*?) x64,Windows 11 FU Exclude Languages,Windows 11,21H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-Upgrade to Windows 11 \(consumer editions\) (?<Language>.*?) arm64,Windows 11 FU Exclude Languages,Windows 11,21H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-for Windows 11 22H2 for x64,,Windows 11,22H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
-ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
-b6ea7c03-5339-4d45-a215-314a05fe37e0
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4
-dd1aa213-54e7-4173-8456-b278964a26b6",
+b6ea7c03-5339-4d45-a215-314a05fe37e0",
 for Windows 11 22H2 for ARM64,,Windows 11,22H2,Updates,arm64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
 ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
 b6ea7c03-5339-4d45-a215-314a05fe37e0
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4
 dd1aa213-54e7-4173-8456-b278964a26b6",
-"for Windows 11, version 22H2 for x64",,Windows 11,22H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
-ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
-b6ea7c03-5339-4d45-a215-314a05fe37e0
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4
-dd1aa213-54e7-4173-8456-b278964a26b6",
-"for Windows 11, version 22H2 for ARM64",,Windows 11,22H2,Updates,arm64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
-ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
-b6ea7c03-5339-4d45-a215-314a05fe37e0
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4
-dd1aa213-54e7-4173-8456-b278964a26b6",
-for Windows 11 Version 22H2 for x64,,Windows 11,22H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
-ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
-b6ea7c03-5339-4d45-a215-314a05fe37e0
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4
-dd1aa213-54e7-4173-8456-b278964a26b6",
-for Windows 11 Version 22H2 for arm64,,Windows 11,22H2,Updates,arm64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
-ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
-b6ea7c03-5339-4d45-a215-314a05fe37e0
-e4b04398-adbd-4b69-93b9-477322331cd3
-abc45868-0c9c-4bc0-a36d-03d54113baf4
-dd1aa213-54e7-4173-8456-b278964a26b6",
-"Windows 11, version 22H2 x64",,Windows 11,22H2,EnablementPackage,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11, version 22H2 arm64",,Windows 11,22H2,EnablementPackage,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 (business editions), version 22H2 * x64",Decline All,Windows 11,22H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 (business editions), version 22H2 * arm64",Decline All,Windows 11,22H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 (consumer editions), version 22H2 * x64",Decline All,Windows 11,22H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 (consumer editions), version 22H2 * arm64",Decline All,Windows 11,22H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 \(business editions\), version 22H2 (?<Language>.*?) x64",Windows 11 FU Exclude Languages,Windows 11,22H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 \(business editions\), version 22H2 (?<Language>.*?) arm64",Windows 11 FU Exclude Languages,Windows 11,22H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 \(consumer editions\), version 22H2 (?<Language>.*?) x64",Windows 11 FU Exclude Languages,Windows 11,22H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 \(consumer editions\), version 22H2 (?<Language>.*?) arm64",Windows 11 FU Exclude Languages,Windows 11,22H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-for Windows 11 23H2 for x64,,Windows 11,23H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+for Windows 11 22H2 for x64,,Windows 11,22H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
 ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
 b6ea7c03-5339-4d45-a215-314a05fe37e0
 e4b04398-adbd-4b69-93b9-477322331cd3
@@ -83,19 +23,31 @@ b6ea7c03-5339-4d45-a215-314a05fe37e0
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4
 dd1aa213-54e7-4173-8456-b278964a26b6",
-"for Windows 11, version 23H2 for x64",,Windows 11,23H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+for Windows 11 23H2 for x64,,Windows 11,23H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
 ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
 b6ea7c03-5339-4d45-a215-314a05fe37e0
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4
 dd1aa213-54e7-4173-8456-b278964a26b6",
-"for Windows 11, version 23H2 for ARM64",,Windows 11,23H2,Updates,arm64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+for Windows 11 for ARM64,,Windows 11,21H2,Updates,arm64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
 ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
 b6ea7c03-5339-4d45-a215-314a05fe37e0
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4
 dd1aa213-54e7-4173-8456-b278964a26b6",
-for Windows 11 Version 23H2 for x64,,Windows 11,23H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+for Windows 11 for x64,,Windows 11,21H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
+b6ea7c03-5339-4d45-a215-314a05fe37e0
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4
+dd1aa213-54e7-4173-8456-b278964a26b6",
+for Windows 11 Version 22H2 for arm64,,Windows 11,22H2,Updates,arm64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
+b6ea7c03-5339-4d45-a215-314a05fe37e0
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4
+dd1aa213-54e7-4173-8456-b278964a26b6",
+for Windows 11 Version 22H2 for x64,,Windows 11,22H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
 ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
 b6ea7c03-5339-4d45-a215-314a05fe37e0
 e4b04398-adbd-4b69-93b9-477322331cd3
@@ -107,13 +59,65 @@ b6ea7c03-5339-4d45-a215-314a05fe37e0
 e4b04398-adbd-4b69-93b9-477322331cd3
 abc45868-0c9c-4bc0-a36d-03d54113baf4
 dd1aa213-54e7-4173-8456-b278964a26b6",
-"Windows 11, version 23H2 x64",,Windows 11,23H2,EnablementPackage,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11, version 23H2 arm64",,Windows 11,23H2,EnablementPackage,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 (business editions), version 23H2 * x64",Decline All,Windows 11,23H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 (business editions), version 23H2 * arm64",Decline All,Windows 11,23H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 (consumer editions), version 23H2 * x64",Decline All,Windows 11,23H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 (consumer editions), version 23H2 * arm64",Decline All,Windows 11,23H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 \(business editions\), version 23H2 (?<Language>.*?) x64",Windows 11 FU Exclude Languages,Windows 11,23H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+for Windows 11 Version 23H2 for x64,,Windows 11,23H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
+b6ea7c03-5339-4d45-a215-314a05fe37e0
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4
+dd1aa213-54e7-4173-8456-b278964a26b6",
+"for Windows 11, version 22H2 for ARM64",,Windows 11,22H2,Updates,arm64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
+b6ea7c03-5339-4d45-a215-314a05fe37e0
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4
+dd1aa213-54e7-4173-8456-b278964a26b6",
+"for Windows 11, version 22H2 for x64",,Windows 11,22H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
+b6ea7c03-5339-4d45-a215-314a05fe37e0
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4
+dd1aa213-54e7-4173-8456-b278964a26b6",
+"for Windows 11, version 23H2 for ARM64",,Windows 11,23H2,Updates,arm64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
+b6ea7c03-5339-4d45-a215-314a05fe37e0
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4
+dd1aa213-54e7-4173-8456-b278964a26b6",
+"for Windows 11, version 23H2 for x64",,Windows 11,23H2,Updates,x64,"72e7624a-5b00-45d2-b92f-e561c0a6a160
+ab1852d6-15fd-4bf0-acd1-d276a5ea82fb
+b6ea7c03-5339-4d45-a215-314a05fe37e0
+e4b04398-adbd-4b69-93b9-477322331cd3
+abc45868-0c9c-4bc0-a36d-03d54113baf4
+dd1aa213-54e7-4173-8456-b278964a26b6",
+Upgrade to Windows 11 (business editions) * arm64,Wildcard,Windows 11,21H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Upgrade to Windows 11 (business editions) * x64,Wildcard,Windows 11,21H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Upgrade to Windows 11 (consumer editions) * arm64,Wildcard,Windows 11,21H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Upgrade to Windows 11 (consumer editions) * x64,Wildcard,Windows 11,21H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Upgrade to Windows 11 \(business editions\) (?<Language>.*?) arm64,Windows 11 FU Exclude Languages,Windows 11,21H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Upgrade to Windows 11 \(business editions\) (?<Language>.*?) x64,Windows 11 FU Exclude Languages,Windows 11,21H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Upgrade to Windows 11 \(consumer editions\) (?<Language>.*?) arm64,Windows 11 FU Exclude Languages,Windows 11,21H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+Upgrade to Windows 11 \(consumer editions\) (?<Language>.*?) x64,Windows 11 FU Exclude Languages,Windows 11,21H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 (business editions), version 22H2 * arm64",Wildcard,Windows 11,22H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 (business editions), version 22H2 * x64",Wildcard,Windows 11,22H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 (business editions), version 23H2 * arm64",Wildcard,Windows 11,23H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 (business editions), version 23H2 * x64",Wildcard,Windows 11,23H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 (consumer editions), version 22H2 * arm64",Wildcard,Windows 11,22H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 (consumer editions), version 22H2 * x64",Wildcard,Windows 11,22H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 (consumer editions), version 23H2 * arm64",Wildcard,Windows 11,23H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 (consumer editions), version 23H2 * x64",Wildcard,Windows 11,23H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 \(business editions\), version 22H2 (?<Language>.*?) arm64",Windows 11 FU Exclude Languages,Windows 11,22H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 \(business editions\), version 22H2 (?<Language>.*?) x64",Windows 11 FU Exclude Languages,Windows 11,22H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 11 \(business editions\), version 23H2 (?<Language>.*?) arm64",Windows 11 FU Exclude Languages,Windows 11,23H2,BusinessUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
-"Windows 11 \(consumer editions\), version 23H2 (?<Language>.*?) x64",Windows 11 FU Exclude Languages,Windows 11,23H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 \(business editions\), version 23H2 (?<Language>.*?) x64",Windows 11 FU Exclude Languages,Windows 11,23H2,BusinessUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 \(consumer editions\), version 22H2 (?<Language>.*?) arm64",Windows 11 FU Exclude Languages,Windows 11,22H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 \(consumer editions\), version 22H2 (?<Language>.*?) x64",Windows 11 FU Exclude Languages,Windows 11,22H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
 "Windows 11 \(consumer editions\), version 23H2 (?<Language>.*?) arm64",Windows 11 FU Exclude Languages,Windows 11,23H2,ConsumerUpgrade,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11 \(consumer editions\), version 23H2 (?<Language>.*?) x64",Windows 11 FU Exclude Languages,Windows 11,23H2,ConsumerUpgrade,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11, version 22H2 arm64",,Windows 11,22H2,EnablementPackage,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11, version 22H2 arm64",Decline Superseded,Windows 11,22H2,EnablementPackage,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11, version 22H2 x64",,Windows 11,22H2,EnablementPackage,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11, version 22H2 x64",Decline Superseded,Windows 11,22H2,EnablementPackage,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11, version 23H2 arm64",,Windows 11,23H2,EnablementPackage,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11, version 23H2 arm64",Decline Superseded,Windows 11,23H2,EnablementPackage,arm64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11, version 23H2 x64",,Windows 11,23H2,EnablementPackage,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
+"Windows 11, version 23H2 x64",Decline Superseded,Windows 11,23H2,EnablementPackage,x64,72e7624a-5b00-45d2-b92f-e561c0a6a160,3689bdc8-b205-4af4-8d4a-a63924c5e9d5
