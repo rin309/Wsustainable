@@ -162,6 +162,14 @@
         If ($MainWindow.FindName("FistLaunchCheckBox").IsChecked){
             Start-ScheduledTask -TaskName $CurrentConfig.ScheduledTask.Name
         }
+
+        If ($MainWindow.FindName("InvokeWsusSynchronizationCheckBox").IsChecked){
+            $WsusServer = Get-WsusServer -Name $CurrentConfig.Wsus.Server -PortNumber $CurrentConfig.Wsus.Port
+            $WsusServerSubscription = $WsusServer.GetSubscription()
+            $WsusServerSubscription.SynchronizeAutomatically = $False
+            $WsusServerSubscription.Save()
+            Write-Verbose "-> disable WSUS synchronization schedule."
+        }
     }
 
     Set-SqlMinimumMemorySize -MinimumMemorySize $MainWindow.FindName("SqlMinimumMemoryTextBox").Value

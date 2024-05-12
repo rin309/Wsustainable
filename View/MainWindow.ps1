@@ -677,6 +677,24 @@ Function Global:Initialize-ScheduleTab{
     $MainWindow.FindName("MonthlyScheduleFourthCheckBox").Add_UnChecked({Set-ScheduleTriggersCheckBox})
     $MainWindow.FindName("MonthlyScheduleLastCheckBox").Add_Checked({Set-ScheduleTriggersCheckBox})
     $MainWindow.FindName("MonthlyScheduleLastCheckBox").Add_UnChecked({Set-ScheduleTriggersCheckBox})
+
+    $MainWindow.FindName("InvokeWsusSynchronizationCheckBox").Add_Checked({Set-WeeklyScheduleDateTimePicker})
+    $MainWindow.FindName("InvokeWsusSynchronizationCheckBox").Add_UnChecked({Set-WeeklyScheduleDateTimePicker})
+
+    $MainWindow.FindName("InvokeWsusSynchronizationCheckBox").DataContext = $CurrentConfig.Wsus
+    Set-WeeklyScheduleDateTimePicker
+}
+Function Global:Set-WeeklyScheduleDateTimePicker{
+    If ($MainWindow.FindName("InvokeWsusSynchronizationCheckBox").IsChecked){
+        $WsusServer = Get-WsusServer -Name $CurrentConfig.Wsus.Server -PortNumber $CurrentConfig.Wsus.Port
+        $Time = $WsusServer.GetSubscription().SynchronizeAutomaticallyTimeOfDay.Add([System.TimeZoneInfo]::Local.BaseUtcOffset)
+        $MainWindow.FindName("WeeklyScheduleDateTimePicker").Value = (Get-Date "2001/1/1 0:00:00") + $Time
+    }
+    Else{
+        $WsusServer = Get-WsusServer -Name $CurrentConfig.Wsus.Server -PortNumber $CurrentConfig.Wsus.Port
+        $Time = $WsusServer.GetSubscription().SynchronizeAutomaticallyTimeOfDay.Add([System.TimeZoneInfo]::Local.BaseUtcOffset)
+        $MainWindow.FindName("WeeklyScheduleDateTimePicker").Value = (Get-Date "2001/1/1 0:00:00") + $Time + (New-TimeSpan -Hours 1)
+    }
 }
 Function Global:Set-ScheduleTriggersCheckBox{
     If ($MainWindow.FindName("EditiingScheduleTriggersExpander").IsExpanded){

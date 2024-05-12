@@ -136,10 +136,20 @@ Function Global:Initialize-ScheduleTaskUI{
                 }
                 #}
 
+                $MainWindow.Dispatcher.Invoke({
+                    $MainWindow.FindName("WeeklyScheduleDateTimePicker").Value = $Item.StartBoundary
+                })
 
             }
         }
         Else{
+            $Item.Sunday = $True
+            $Item.Monday = $True
+            $Item.Tuesday = $True
+            $Item.Wednesday = $True
+            $Item.Thursday = $True
+            $Item.Friday = $True
+            $Item.Saturday = $True
             Write-Verbose "Not found task: $($CurrentConfig.ScheduledTask.Name)"
         }
 
@@ -175,10 +185,6 @@ Function Global:Initialize-ScheduleTaskUI{
             $MainWindow.FindName("MonthlyScheduleThirdCheckBox").DataContext = $Item
             $MainWindow.FindName("MonthlyScheduleFourthCheckBox").DataContext = $Item
             $MainWindow.FindName("MonthlyScheduleLastCheckBox").DataContext = $Item
-
-            $MainWindow.FindName("WeeklyScheduleDateTimePicker").Value = $Item.StartBoundary
-            
-            
         })
         #Write-Verbose "タスク $($CurrentConfig.ScheduledTask.Name) の調査が終わりました"
     }

@@ -6,7 +6,7 @@
         xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
         mc:Ignorable="d" SnapsToDevicePixels="true" FontSize="14"
         x:Class="MainWindow" xmlns:local="clr-namespace:View"
-        Title="Wsustainable (PREVIEW)" Height="800" Width="850" MinHeight="550" MinWidth="400" d:Height="2500" Background="{DynamicResource WindowBackgroundBrush}">
+        Title="Wsustainable (PREVIEW)" Height="800" Width="850" MinHeight="550" MinWidth="400" d:Height="2500" Background="{DynamicResource WindowBackgroundBrush}" WindowState="Maximized">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -378,6 +378,9 @@
                             <Expander x:Name="EditiingScheduleTriggersExpander" Style="{DynamicResource CheckedMinimumExpanderStyle}" Header="{}{0} という名前のタスクを登録します" d:IsExpanded="True">
 
                                 <ItemsControl ItemContainerStyle="{DynamicResource MinimumVerticalListBoxItemContainerStyle}">
+                                    <ListBoxItem Tag="更新プログラムを同期後に実行する" AutomationProperties.HelpText="WSUS管理コンソールの同期設定を無効にします" Style="{DynamicResource VerticalListBoxItemContainerStyle}" >
+                                        <CheckBox x:Name="InvokeWsusSynchronizationCheckBox" IsChecked="{Binding InvokeWsusSynchronization, Mode=TwoWay}" HorizontalAlignment="Right"/>
+                                    </ListBoxItem>
                                     <ListBoxItem Tag="毎週" AutomationProperties.HelpText="" Margin="0">
                                         <WrapPanel x:Name="WeeklyScheduleContainer">
                                             <CheckBox x:Name="WeeklyScheduleSundayCheckBox" Content="日" IsChecked="{Binding Sunday, Mode=TwoWay}"/>

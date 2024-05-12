@@ -416,6 +416,8 @@ Function Optimize-WsusContents{
     Initialize-Directories
     Start-Logging
 
+    Write-Verbose "$(Get-Date -Format F): Start Optimize-WsusContents"
+
     # Initialize config
     $Global:CurrentConfig = Get-DeclineRules -Config $CurrentConfig
     If ($Verbose -or $CurrentConfig.Log.Verbose){
@@ -616,6 +618,8 @@ Function Optimize-WsusContents{
             }
         }
     }
+
+    Write-Verbose "$(Get-Date -Format F): Finish Optimize-WsusContents"
     Stop-Logging
 }
 Export-ModuleMember -Function Optimize-WsusContents

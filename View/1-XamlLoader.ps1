@@ -19,6 +19,7 @@
     $GetAssemblies | ForEach-Object{
         Write-Verbose "FullName: $($_.FullName)`nDefinedTypes: $($_.DefinedTypes)`nExportedTypes: $($_.ExportedTypes)"
     }
+    Clear-Host
 }
 
 Function Global:Request-Job($Script, $DependentPs1File, $Arguments, $PSScriptRoot) {
@@ -111,6 +112,10 @@ Function Global:Get-MainWindow(){
 
     $MainWindow.FindName("IndicatorRoot").Visibility = [System.Windows.Visibility]::Visible
     Request-Job -Script {Initialize-MainWindowUIJob} -DependentPs1File (Resolve-Path (Join-Path $PSScriptRoot "..\View\Initialize-MainWindowUIJob.Task.ps1")).Path -PSScriptRoot $PSScriptRoot | Out-Null
+
+    $MainWindow.Activate() | Out-Null
+    $MainWindow.Focus() | Out-Null
+
 }
 
 Function Global:Get-SelectLanguagesWindow(){
