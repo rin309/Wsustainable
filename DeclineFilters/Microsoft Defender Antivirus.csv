@@ -1,3 +1,13 @@
 ﻿Filter,Mode,Product,Version,Type,Architecture,TargetProductId,TargetClassifications
 (KB2267602 \(Version )(?<Version>.+?)(\) - Current Channel \(Broad\)),Decline Old Version,Microsoft Defender Antivirus,,,,8c3fcc84-7410-4a95-8b89-a166a0190486,
+(KB4052623 \(Version )(?<Version>.+?)(\) - Beta Channel - Prerelease),Decline Old Version,Microsoft Defender Antivirus,,,,8c3fcc84-7410-4a95-8b89-a166a0190486,
+(KB4052623 \(Version )(?<Version>.+?)(\) - Critical: Time Delay),Decline Old Version,Microsoft Defender Antivirus,,,,8c3fcc84-7410-4a95-8b89-a166a0190486,
+(KB4052623 \(Version )(?<Version>.+?)(\) - Current Channel \(Broad\)),Decline Old Version,Microsoft Defender Antivirus,,,,8c3fcc84-7410-4a95-8b89-a166a0190486,
+(KB4052623 \(Version )(?<Version>.+?)(\) - Current Channel \(Preview\)),Decline Old Version,Microsoft Defender Antivirus,,,,8c3fcc84-7410-4a95-8b89-a166a0190486,
+(KB4052623 \(Version )(?<Version>.+?)(\) - Current Channel \(Staged\)),Decline Old Version,Microsoft Defender Antivirus,,,,8c3fcc84-7410-4a95-8b89-a166a0190486,
+(KB4052623 \(Version )(?<Version>.+?)(\) - Internal Only),Decline Old Version,Microsoft Defender Antivirus,,,,8c3fcc84-7410-4a95-8b89-a166a0190486,
+(KB4052623 \(Version )(?<Version>.+?)(\) - Packaging Only),Decline Old Version,Microsoft Defender Antivirus,,,,8c3fcc84-7410-4a95-8b89-a166a0190486,
+(KB5005292 \(Version )(?<Version>.+?)(\) - Beta Channel - Prerelease),Decline Old Version,Microsoft Defender for Endpoint,,,,52561474-cdfa-4717-8692-bf8d58abc425,
+(KB5005292 \(Version )(?<Version>.+?)(\) - Internal Only),Decline Old Version,Microsoft Defender for Endpoint,,,,52561474-cdfa-4717-8692-bf8d58abc425,
+(KB5005292 \(Version )(?<Version>.+?)(\) - Packaging Only),Decline Old Version,Microsoft Defender for Endpoint,,,,52561474-cdfa-4717-8692-bf8d58abc425,
 (KB915597 \(Version )(?<Version>.+?)(\) - Current Channel \(Broad\)),Decline Old Version,Microsoft Defender Antivirus,,,,8c3fcc84-7410-4a95-8b89-a166a0190486,

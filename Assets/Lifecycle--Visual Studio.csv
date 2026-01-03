@@ -1,4 +1,7 @@
 ﻿Title,Version,EndDate,NeededProducts,IsLtsc
+Visual Studio 2022 Version 17.14 (LTSC channel),17.14,2032/1/13,Visual Studio 2022,TRUE
+Visual Studio 2022 Version 17.12 (LTSC channel),17.12,2026/7/14,Visual Studio 2022,TRUE
+Visual Studio 2022 Version 17.10 (LTSC channel),17.10,2026/1/13,Visual Studio 2022,TRUE
 Visual Studio 2022 Version 17.8 (LTSC channel),17.8,2025/7/8,Visual Studio 2022,TRUE
 Visual Studio 2022 Version 17.6 (LTSC channel),17.6,2025/1/9,Visual Studio 2022,TRUE
 Visual Studio 2022 Version 17.4 (LTSC channel),17.4,2024/7/11,Visual Studio 2022,TRUE
